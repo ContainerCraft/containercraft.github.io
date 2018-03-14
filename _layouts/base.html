@@ -12,16 +12,22 @@
   <link rel="alternate" type="application/atom+xml" title="{{ site.info.title }}" href="/atom.xml" />
   <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.info.title }}{% endif %}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %} 
-  {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}       
+  {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %}
+  {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.info.title }}{% endif %}"/>
   <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-  {% if page.cover_image %}<meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>{% endif %}
+  {% if page.og-image %}
+      <meta property="og:image" content="{{ site.url }}/images/{{ page.og-image }}"/>
+  {% else %}
+      <meta property="og:image" content="{{ site.url }}/images/{{ site.info.og-image }}"/>
+  {% endif %}
+
+
   {% if page.excerpt %}
   <meta property="og:description" content="{{ page.excerpt }}"/>
   <meta name="description" content="{{ page.excerpt }}"/>
   {% endif %}
-  <meta property="og:site_name" content="{{ site.info.title }}">     
+  <meta property="og:site_name" content="{{ site.info.title }}">
 </head>
 <body>
     
@@ -31,7 +37,8 @@
         <img src="/images/{{ site.info.logo }}" alt="Inc">
       </a>
       <a href="/">Blog</a>
-      <a href="/about.html">About</a>
+      <a href="/presentations.html">Presentations</a>
+      <a href="/about.html">About Me</a>
     </nav>
   </header>
 
@@ -39,17 +46,17 @@
 
   <footer class="site-footer">
     <div class="container">
-      &copy; {{ site.time | date: "%Y" }} Will Koehler
+      &copy; {{ site.time | date: "%Y" }} Gurpreet Luthra
         
       <nav>
         <a href="/">Blog</a> &middot;
-        <a href="/about.html">About</a>
+        <a href="/about.html">About Me</a>
       </nav>
         
       <nav class="social">
         {% include social_links.html %}
       </nav>
-      <div>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></div>
+      <div>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a>. Powered by Jekyll.</div>
     </div>
   </footer>
 

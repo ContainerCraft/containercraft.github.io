@@ -1,18 +1,18 @@
 ---
 layout: post
 
-title: Another Blog Entry
-subtitle: "Something creative and inspiring"
-cover_image: overbrook-ravine-in-clintonville.jpg
+title: "I moved to Jekyll"
+subtitle: "More control. More elegant. My new blog."
+cover_image: general/artists.jpg
+cover_image_caption: "Tibetan artists in Norbulingka Institute, Dharamshala, India"
 
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue libero, tincidunt non massa vel,
-varius ornare est."
+excerpt: "My earlier blog on Google Blogspot hit a 100,000 mark. But I didn't like the way my blog looked. So I moved to Jekyll."
 
 author:
-  name: Will Koehler
-  twitter: wckoehler
-  bio: Web developer specializing in full-stack Rails applications.
-  image: wk.jpg
+  name: Gurpreet Luthra
+  twitter: _zenx_
+  bio: Software Craftsman and Lead Consultant Developer at ThoughtWorks
+  image: general/gp-square-v.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue libero, tincidunt non massa vel,
 varius ornare est. Vivamus elementum orci in commodo pharetra. Proin lorem lorem, convallis sit amet
