@@ -1,0 +1,71 @@
+---
+layout: base
+---
+<div class="blog-cover" style="background-image:url(/images/{{ site.info.about_image }});">
+  <div class='cover_overlay'>
+    <div class="content">
+      <h1>{{ site.info.title }}</h1>
+      <h3>About me</h3>
+      {% include social_links.html %}
+    </div>
+  </div>
+</div>
+<div class='cover-caption'><a href='/about.html#pictures'>{{ site.info.about_image_caption }}</a></div>
+
+<article>
+  <div class="container">
+    <section>
+      <p>
+        I build custom web applications for small businesses and startups. I take projects from concept
+        to final deliverable, often continuing with hosting, long-term maintenance, and updates.
+      </p>
+
+      <h2>Expertise</h2>
+      <ul>
+        <li>Turning business requirements into a clean simple web application</li>
+        <li>Ruby + Rails</li>
+        <li>HTML, CSS / SCSS</li>
+        <li>Front-end Javascript</li>
+        <li>AWS infrastructure</li>
+      </ul>
+      <p>
+        The solutions I deliver to my clients improve daily workflow, track key business metrics, and make
+        companies more efficient. These applications commonly return the initial investment in under
+        a year via revenue growth and cost savings and continue to generate wealth for many years
+        after that.
+      </p>
+      <p>
+        For more details see my <a href="/resume.html">resume</a>.
+      </p>
+
+      <a id='pictures'></a>
+      <h2>Pictures</h2>
+      <p>
+        The pictures in this blog are scenes from my neighborhood, city, and surrounding
+        countryside. I like living in Columbus, OH. It's the best city no one
+        knows about.
+      </p>
+
+      <h2>Get In Touch</h2>
+      <p>
+        Feel free to reach out about a project, a coding question, or anything else that's
+        on your mind. Email me at <a href="mailto:wck555@gmail.com?subject=Question for Will Koehler">wck555@gmail.com</a>
+        or use this form.
+      </p>
+      <p>
+        <form class='contact' method="post" action="//formspree.io/wck555+formspree@gmail.com">
+          <input type="text" name="name" placeholder="Name"><br>
+          <input type="email" name="_replyto" placeholder="Email"><br>
+          <textarea name="message" rows=7></textarea><br>
+          <input type="submit" value="Send">
+        </form>
+      </p>
+      <p>
+        Most days you can find me at <a href='http://saltmines.us'>The Salt Mines</a>, an
+        awesome coworking site in Clintonville. Stop in any time.
+      </p>
+
+    </section>
+  </div>
+</article>
+
