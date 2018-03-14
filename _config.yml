@@ -46,7 +46,7 @@ source:      .
 destination: _site
 plugins_dir:     _plugins
 layouts_dir:     _layouts
-plugins:    [jekyll-paginate]
+#plugins:    [jekyll-paginate]
 include:     ['.htaccess']
 exclude:     []
 timezone:    nil
