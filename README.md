@@ -1,72 +1,76 @@
-## Introduction
+# [React](https://reactjs.org/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![Coverage Status](https://img.shields.io/coveralls/facebook/react/master.svg?style=flat)](https://coveralls.io/github/facebook/react?branch=master) [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 
-This is a [Jekyll](https://jekyllrb.com/) based blog of Gurpreet.
+React is a JavaScript library for building user interfaces.
 
+* **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
+* **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+* **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using [React Native](https://facebook.github.io/react-native/).
 
-## Ruby and RVM
+[Learn how to use React in your own project](https://reactjs.org/docs/getting-started.html).
 
-This project already contains a `.ruby-gemset` and `.ruby-version` file,
-to ensure that if you have RVM installed, then it will install gems
-in the right directory, and give you a unique gemset.
+## Documentation
 
-## Installation & Usage
+You can find the React documentation [on the website](https://reactjs.org/docs).  
+It is divided into several sections:
 
-    bundle install
+* [Quick Start](https://reactjs.org/docs/hello-world.html)
+* [Advanced Guides](https://reactjs.org/docs/jsx-in-depth.html)
+* [API Reference](https://reactjs.org/docs/react-api.html)
+* [Tutorial](https://reactjs.org/tutorial/tutorial.html)
+* [Where to Get Support](https://reactjs.org/community/support.html)
+* [Contributing Guide](https://reactjs.org/docs/how-to-contribute.html)
 
-    # See blog locally on port 4000
-    bundle exec jekyll serve
+You can improve it by sending pull requests to [this repository](https://github.com/reactjs/reactjs.org).
 
-    # See blog locally on port 4000 (with drafts)
-    bundle exec jekyll serve --draft
+## Examples
 
-    # Command used by Github to build. Use this to verify if there are any errors
-    bundle exec jekyll build --safe
+We have several examples [on the website](https://reactjs.org/). Here is the first one to get you started:
 
-## Publish to Github Pages
+```jsx
+class HelloMessage extends React.Component {
+  render() {
+    return <div>Hello {this.props.name}</div>;
+  }
+}
 
-    # Create a local gh-pages branch which contains only the assets that need to be published
-    JEKYLL_ENV=production bundle exec rake site:publish
+ReactDOM.render(
+  <HelloMessage name="John" />,
+  document.getElementById('container')
+);
+```
 
-    # Switch to this new branch
-    git checkout gh-pages
+This example will render "Hello John" into a container on the page.
 
-    # FORCE Push the gh-branch to MASTER branch of your github.io repository assuming the remote name is 'website'
-    git push website gh-pages:master --force
+You'll notice that we used an HTML-like syntax; [we call it JSX](https://reactjs.org/docs/introducing-jsx.html). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. We recommend using [Babel](https://babeljs.io/) with a [React preset](https://babeljs.io/docs/plugins/preset-react/) to convert JSX into native JavaScript for browsers to digest.
 
-    # Once successfully published, tag the current branch
-    git checkout -b gh-pages-rel-x
+## Installation
 
-    # Delete the local gh-pages branch.. since we don't need it anymore
-    git branch -D gh-pages
+React is available as the `react` package on [npm](https://www.npmjs.com/). It is also available on a [CDN](https://reactjs.org/docs/cdn-links.html).
 
-    # Push backup to github
-    git push origin gh-pages-rel-x
+React is flexible and can be used in a variety of projects. You can create new apps with it, but you can also gradually introduce it into an existing codebase without doing a rewrite.
 
+The recommended way to install React depends on your project. Here you can find short guides for the most common scenarios:
 
-## Jekyll Related Links
+* [Trying Out React](https://reactjs.org/docs/try-react.html)
+* [Creating a New Application](https://reactjs.org/docs/add-react-to-a-new-app.html)
+* [Adding React to an Existing Application](https://reactjs.org/docs/add-react-to-an-existing-app.html)
 
-+ [Jekyll From Scratch - Getting Started] (http://pixelcog.com/blog/2013/jekyll-from-scratch-introduction/)
-+ [Jekyll Configuration options] (http://jekyllrb.com/docs/configuration/)
-+ [Configuring Go Daddy with your domain to point to Github pages] (http://andrewsturges.com/blog/jekyll/tutorial/2014/11/06/github-and-godaddy.html)
-+ [Understanding difference between master and gh-pages](http://octopress.org/docs/deploying/github/)
+## Contributing
 
+The main purpose of this repository is to continue to evolve React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
 
+### [Code of Conduct](https://code.facebook.com/codeofconduct)
 
-## Thanks
+Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.facebook.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
 
-[Gurpreet] This blog was forked from [https://github.com/willkoehler/](https://github.com/willkoehler/). Thank you!
+### [Contributing Guide](https://reactjs.org/contributing/how-to-contribute.html)
 
+Read our [contributing guide](https://reactjs.org/contributing/how-to-contribute.html) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
 
-[Original] This blog was forked from https://github.com/kippt/jekyll-incorporated. Originally built for
-[sendtoinc.com](https://sendtoinc.com), your workspace for sharing and organizing knowledge.
-Original template built by:
+### Good First Issues
 
-**Karri Saarinen**
+To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/facebook/react/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started.
 
-+ [http://twitter.com/karrisaarinen](http://twitter.com/karrisaarinen)
-+ [http://github.com/ksaa](http://github.com/ksaa)
+### License
 
-**Jori Lallo**
-
-+ [http://twitter.com/jorilallo](http://twitter.com/jorilallo)
-+ [http://github.com/jorde](http://github.com/jorilallo)
+React is [MIT licensed](./LICENSE).
