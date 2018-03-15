@@ -1,61 +1,63 @@
-# React-Bootstrap [![Travis][build-badge]][build] [![npm][npm-badge]][npm]
+# Jekyll Incorporated
+Modern Jekyll based blog. Great for companies, products or anything. See live at [blog.sendtoinc.com](http://blog.sendtoinc.com)
 
-[Bootstrap 3][bootstrap] components built with [React][react].
+## Installation & Usage
+    bundle install
+    jekyll serve --watch
 
-[![Codecov][codecov-badge]][codecov]
-[![Discord][discord-badge]][discord]
-[![Thinkful][thinkful-badge]][thinkful]
+_Note: Requires Ruby version 1.9.3 =>. For example use [rbenv](https://github.com/sstephenson/rbenv)_   
+    
+## Configuration
+Edit: _config.yml (general options), main.css (theme colors &amp; fonts)
 
-__Under active development - APIs will change.__ Check out the [1.0.0 roadmap](https://github.com/react-bootstrap/react-bootstrap/wiki#100-roadmap) and [contributing guidelines][contributing] to see where you can help out. Prior to the 1.0.0 release, deprecations or breaking changes will result in a minor version bump.
+```
+jekyll-incorporated/
+├── _config.yml
+├── _assets/
+    ├── stylesheets/
+        ├── main.scss
+```
 
-## Docs
+_Note: when editing _config.yml, you need to restart jekyll to see the changes.__
 
-See the [documentation][documentation] with live editable examples.
+    
+## Publish to Github Pages
+1. Add your domain to _CNAME_
+2. Edit your repo address at _Rakefile_
+    
+Run rake task. **NOTE: It will deploy the generated site to _gh-pages_ branch overwriting it**    
+``` 
+rake site:publish
+```
 
-## Related modules
+## Usage examples
 
-- [react-router-bootstrap][react-router-bootstrap] – Integration with [React Router][react-router]
-- [React Bootstrap Extended][react-bootstrap-extended] - A version of React Bootstrap where each component has extra props that map to bootstrap's utility classes. For example, `pullRight` adds the class `pull-right` to a component.
-- [Awesome React Bootstrap Components][awesome-react-bootstrap-components] - Additional components like off-canvas navbar, switch and sliders.
+* Adroll Engineering http://tech.adroll.com/
+* Brace.io blog http://blog.brace.io/
+* Spark.io blog http://blog.spark.io/
+* Department of Better Technology http://blog.dobt.co/
 
-## Local setup
+## Authors
 
-Yarn is the our package manager of choice here. Check out setup
-instructions [here](https://yarnpkg.com/en/docs/install) if you don't have it installed already.
-After that you can run `yarn run bootstrap` to install all the needed dependencies.
+Originally build for [sendtoinc.com](https://sendtoinc.com), your workspace for sharing and organizing knowledge
 
-From there you can:
+**Karri Saarinen**
 
-- Run the tests once with `yarn test` (Or run them in watch mode with `yarn run tdd`).
-- Start a local copy of the docs site with `yarn start`
-- Or build a local copy of the library with `yarn run build`
++ [http://twitter.com/karrisaarinen](http://twitter.com/karrisaarinen)
++ [http://github.com/ksaa](http://github.com/ksaa)
 
-## Contributions
+**Jori Lallo**
 
-Yes please! See the [contributing guidelines][contributing] for details.
++ [http://twitter.com/jorilallo](http://twitter.com/jorilallo)
++ [http://github.com/jorde](http://github.com/jorilallo)
 
-[bootstrap]: http://getbootstrap.com
-[react]: http://facebook.github.io/react/
+## Todo:
 
-[documentation]: http://react-bootstrap.github.io
-[contributing]: CONTRIBUTING.md
++ Documentation
++ Less config files
++ Better deploy scripts
 
-[build-badge]: https://travis-ci.org/react-bootstrap/react-bootstrap.svg?branch=master
-[build]: https://travis-ci.org/react-bootstrap/react-bootstrap
+## Copyright and license
 
-[npm-badge]: https://badge.fury.io/js/react-bootstrap.svg
-[npm]: http://badge.fury.io/js/react-bootstrap
+Copyright 2013 Kippt Inc. under [The MIT License ](LICENSE)
 
-[react-router-bootstrap]: https://github.com/react-bootstrap/react-router-bootstrap
-[react-router]: https://github.com/reactjs/react-router
-[react-bootstrap-extended]: https://github.com/rbalicki2/react-bootstrap-extended
-[awesome-react-bootstrap-components]: https://github.com/Hermanya/awesome-react-bootstrap-components
-
-[thinkful-badge]: https://tf-assets-staging.s3.amazonaws.com/badges/thinkful_repo_badge.svg
-[thinkful]: http://start.thinkful.com/react/?utm_source=github&utm_medium=badge&utm_campaign=react-bootstrap
-
-[codecov-badge]: https://img.shields.io/codecov/c/github/react-bootstrap/react-bootstrap/master.svg
-[codecov]: https://codecov.io/gh/react-bootstrap/react-bootstrap
-
-[discord-badge]: https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg
-[discord]: https://discord.gg/0ZcbPKXt5bXLs9XK
