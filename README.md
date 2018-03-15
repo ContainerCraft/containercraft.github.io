@@ -1,76 +1,61 @@
-# [React](https://reactjs.org/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![Coverage Status](https://img.shields.io/coveralls/facebook/react/master.svg?style=flat)](https://coveralls.io/github/facebook/react?branch=master) [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+# React-Bootstrap [![Travis][build-badge]][build] [![npm][npm-badge]][npm]
 
-React is a JavaScript library for building user interfaces.
+[Bootstrap 3][bootstrap] components built with [React][react].
 
-* **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
-* **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
-* **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using [React Native](https://facebook.github.io/react-native/).
+[![Codecov][codecov-badge]][codecov]
+[![Discord][discord-badge]][discord]
+[![Thinkful][thinkful-badge]][thinkful]
 
-[Learn how to use React in your own project](https://reactjs.org/docs/getting-started.html).
+__Under active development - APIs will change.__ Check out the [1.0.0 roadmap](https://github.com/react-bootstrap/react-bootstrap/wiki#100-roadmap) and [contributing guidelines][contributing] to see where you can help out. Prior to the 1.0.0 release, deprecations or breaking changes will result in a minor version bump.
 
-## Documentation
+## Docs
 
-You can find the React documentation [on the website](https://reactjs.org/docs).  
-It is divided into several sections:
+See the [documentation][documentation] with live editable examples.
 
-* [Quick Start](https://reactjs.org/docs/hello-world.html)
-* [Advanced Guides](https://reactjs.org/docs/jsx-in-depth.html)
-* [API Reference](https://reactjs.org/docs/react-api.html)
-* [Tutorial](https://reactjs.org/tutorial/tutorial.html)
-* [Where to Get Support](https://reactjs.org/community/support.html)
-* [Contributing Guide](https://reactjs.org/docs/how-to-contribute.html)
+## Related modules
 
-You can improve it by sending pull requests to [this repository](https://github.com/reactjs/reactjs.org).
+- [react-router-bootstrap][react-router-bootstrap] – Integration with [React Router][react-router]
+- [React Bootstrap Extended][react-bootstrap-extended] - A version of React Bootstrap where each component has extra props that map to bootstrap's utility classes. For example, `pullRight` adds the class `pull-right` to a component.
+- [Awesome React Bootstrap Components][awesome-react-bootstrap-components] - Additional components like off-canvas navbar, switch and sliders.
 
-## Examples
+## Local setup
 
-We have several examples [on the website](https://reactjs.org/). Here is the first one to get you started:
+Yarn is the our package manager of choice here. Check out setup
+instructions [here](https://yarnpkg.com/en/docs/install) if you don't have it installed already.
+After that you can run `yarn run bootstrap` to install all the needed dependencies.
 
-```jsx
-class HelloMessage extends React.Component {
-  render() {
-    return <div>Hello {this.props.name}</div>;
-  }
-}
+From there you can:
 
-ReactDOM.render(
-  <HelloMessage name="John" />,
-  document.getElementById('container')
-);
-```
+- Run the tests once with `yarn test` (Or run them in watch mode with `yarn run tdd`).
+- Start a local copy of the docs site with `yarn start`
+- Or build a local copy of the library with `yarn run build`
 
-This example will render "Hello John" into a container on the page.
+## Contributions
 
-You'll notice that we used an HTML-like syntax; [we call it JSX](https://reactjs.org/docs/introducing-jsx.html). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. We recommend using [Babel](https://babeljs.io/) with a [React preset](https://babeljs.io/docs/plugins/preset-react/) to convert JSX into native JavaScript for browsers to digest.
+Yes please! See the [contributing guidelines][contributing] for details.
 
-## Installation
+[bootstrap]: http://getbootstrap.com
+[react]: http://facebook.github.io/react/
 
-React is available as the `react` package on [npm](https://www.npmjs.com/). It is also available on a [CDN](https://reactjs.org/docs/cdn-links.html).
+[documentation]: http://react-bootstrap.github.io
+[contributing]: CONTRIBUTING.md
 
-React is flexible and can be used in a variety of projects. You can create new apps with it, but you can also gradually introduce it into an existing codebase without doing a rewrite.
+[build-badge]: https://travis-ci.org/react-bootstrap/react-bootstrap.svg?branch=master
+[build]: https://travis-ci.org/react-bootstrap/react-bootstrap
 
-The recommended way to install React depends on your project. Here you can find short guides for the most common scenarios:
+[npm-badge]: https://badge.fury.io/js/react-bootstrap.svg
+[npm]: http://badge.fury.io/js/react-bootstrap
 
-* [Trying Out React](https://reactjs.org/docs/try-react.html)
-* [Creating a New Application](https://reactjs.org/docs/add-react-to-a-new-app.html)
-* [Adding React to an Existing Application](https://reactjs.org/docs/add-react-to-an-existing-app.html)
+[react-router-bootstrap]: https://github.com/react-bootstrap/react-router-bootstrap
+[react-router]: https://github.com/reactjs/react-router
+[react-bootstrap-extended]: https://github.com/rbalicki2/react-bootstrap-extended
+[awesome-react-bootstrap-components]: https://github.com/Hermanya/awesome-react-bootstrap-components
 
-## Contributing
+[thinkful-badge]: https://tf-assets-staging.s3.amazonaws.com/badges/thinkful_repo_badge.svg
+[thinkful]: http://start.thinkful.com/react/?utm_source=github&utm_medium=badge&utm_campaign=react-bootstrap
 
-The main purpose of this repository is to continue to evolve React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
+[codecov-badge]: https://img.shields.io/codecov/c/github/react-bootstrap/react-bootstrap/master.svg
+[codecov]: https://codecov.io/gh/react-bootstrap/react-bootstrap
 
-### [Code of Conduct](https://code.facebook.com/codeofconduct)
-
-Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.facebook.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
-
-### [Contributing Guide](https://reactjs.org/contributing/how-to-contribute.html)
-
-Read our [contributing guide](https://reactjs.org/contributing/how-to-contribute.html) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
-
-### Good First Issues
-
-To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/facebook/react/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started.
-
-### License
-
-React is [MIT licensed](./LICENSE).
+[discord-badge]: https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg
+[discord]: https://discord.gg/0ZcbPKXt5bXLs9XK

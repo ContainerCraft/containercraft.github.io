@@ -1,1396 +1,1025 @@
-## [Unreleased]
-<details>
-  <summary>
-    Changes that have landed in master but are not yet released.
-    Click to see more.
-  </summary>
+## [v0.32.1]
+> 2018-01-24
 
-### React
+- **Bugfix:** Do not allow more than one open panel in an accordion group ([#2940])
 
-* Fix a false positive warning in IE11 when using `React.Fragment`. ([@XaveScor](https://github.com/XaveScor) in [#11823](https://github.com/facebook/react/pull/11823))
+[v0.32.1]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.32.0...v0.32.1
+[#2940]: https://github.com/react-bootstrap/react-bootstrap/pull/2940
 
-### React DOM
 
-* Fix minor DOM input bugs in IE and Safari. ([@nhunzaker](https://github.com/nhunzaker) in [#11534](https://github.com/facebook/react/pull/11534))
-* Fix containing elements getting focused on SSR markup mismatch. ([@koba04](https://github.com/koba04) in [#11737](https://github.com/facebook/react/pull/11737))
-* Fix `value` and `defaultValue` to ignore Symbol values. ([@nhunzaker](https://github.com/nhunzaker) in [#11741](https://github.com/facebook/react/pull/11741))
-* Throw with a meaningful message if the component runs after jsdom has been destroyed. ([@gaearon](https://github.com/gaearon) in [#11677](https://github.com/facebook/react/pull/11677))
-* Deduplicate warning messages about `<option selected>`. ([@watadarkstar](https://github.com/watadarkstar) in [#11821](https://github.com/facebook/react/pull/11821))
-* Deprecate `ReactDOM.unstable_createPortal()` in favor of `ReactDOM.createPortal()`. ([@prometheansacrifice](https://github.com/prometheansacrifice) in [#11747](https://github.com/facebook/react/pull/11747))
+## [v0.32.0]
+> 2018-01-04
 
-### React DOM Server
+- **Breaking:** Refactor Panel API ([#1769])
+- **Breaking:** Remove Pagination logic, for purely presentational components ([#2587])
 
-* Prevent an infinite loop when attempting to render portals with SSR. ([@gaearon](https://github.com/gaearon) in [#11709](https://github.com/facebook/react/pull/11709))
+- **Feature:** Switch to react-transition-group for Transition components ([#2676])
+- **Feature:** Remove inconsistent preventDefaults onSelect events ([#2790])
+- **BugFix:** Use different properties for mouseover and mouseout in handleMouseOverOut ([#2908])
+- **Docs:** Add new Gatsby docs! ([#2920])
+- **Chore:** replace old TransitionEvents ([#2902])
 
-</details>
+[v0.32.0]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.31.5...v0.32.0
+[#2920]: https://github.com/react-bootstrap/react-bootstrap/pull/2920
+[#2902]: https://github.com/react-bootstrap/react-bootstrap/pull/2902
+[#2587]: https://github.com/react-bootstrap/react-bootstrap/pull/2587
+[#2790]: https://github.com/react-bootstrap/react-bootstrap/pull/2790
+[#2908]: https://github.com/react-bootstrap/react-bootstrap/pull/2908
+[#2676]: https://github.com/react-bootstrap/react-bootstrap/pull/2676
+[#1769]: https://github.com/react-bootstrap/react-bootstrap/pull/1769
 
-## 16.2.0 (November 28, 2017)
 
-### React
+## [v0.31.5]
+> 2017-10-24
 
-* Add `Fragment` as named export to React. ([@clemmy](https://github.com/clemmy) in [#10783](https://github.com/facebook/react/pull/10783))
-* Support experimental Call/Return types in `React.Children` utilities. ([@MatteoVH](https://github.com/MatteoVH) in [#11422](https://github.com/facebook/react/pull/11422))
+- **Bugfix:** Fix ES module build ([#2856])
 
-### React DOM
+[v0.31.5]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.31.4...v0.31.5
+[#2856]: https://github.com/react-bootstrap/react-bootstrap/pull/2856
 
-* Fix radio buttons not getting checked when using multiple lists of radios. ([@landvibe](https://github.com/landvibe) in [#11227](https://github.com/facebook/react/pull/11227))
-* Fix radio buttons not receiving the `onChange` event in some cases. ([@jquense](https://github.com/jquense) in [#11028](https://github.com/facebook/react/pull/11028))
 
-### React Test Renderer
+## [v0.31.4]
+> 2017-10-24
 
-* Fix `setState()` callback firing too early when called from `componentWillMount`. ([@accordeiro](https://github.com/accordeiro) in [#11507](https://github.com/facebook/react/pull/11507))
+- **Feature:** Support `align` on `<Media.Body>` ([#2830])
+- **Bugfix:** Update react-overlays dependency to support React v16 ([#2839], [#2855])
+- **Bugfix:** Use a bound function for the base modal ref in `<Modal>` to prevent the ref getting set to `null` ([#2844])
+- **Chore:** Update Babel configuration ([#2821], [#2837])
 
-### React Reconciler
+[v0.31.4]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.31.3...v0.31.4
+[#2821]: https://github.com/react-bootstrap/react-bootstrap/pull/2821
+[#2830]: https://github.com/react-bootstrap/react-bootstrap/pull/2830
+[#2837]: https://github.com/react-bootstrap/react-bootstrap/pull/2837
+[#2839]: https://github.com/react-bootstrap/react-bootstrap/pull/2839
+[#2844]: https://github.com/react-bootstrap/react-bootstrap/pull/2844
+[#2855]: https://github.com/react-bootstrap/react-bootstrap/pull/2855
 
-* Expose `react-reconciler/reflection` with utilities useful to custom renderers. ([@rivenhk](https://github.com/rivenhk) in [#11683](https://github.com/facebook/react/pull/11683))
 
-### Internal Changes
+## [v0.31.3]
+> 2017-09-06
 
-* Many tests were rewritten against the public API. Big thanks to [everyone who contributed](https://github.com/facebook/react/issues/11299)!
+- **Bugfix:** Support `disabled` on `<ToggleButton>` ([#2760])
+- **Bugfix:** Handle space keydown events on `<SafeAnchor>` ([#2697])
+- **Bugfix:** Handle reducing number of items in uncontrolled carousels ([#2768])
 
-## 16.1.1 (November 13, 2017)
+[v0.31.3]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.31.2...v0.31.3
+[#2697]: https://github.com/react-bootstrap/react-bootstrap/pull/2697
+[#2760]: https://github.com/react-bootstrap/react-bootstrap/pull/2760
+[#2768]: https://github.com/react-bootstrap/react-bootstrap/pull/2768
 
-### React
 
-* Improve the warning about undefined component type. ([@selbekk](https://github.com/selbekk) in [#11505](https://github.com/facebook/react/pull/11505))
+## [v0.31.2]
+> 2017-08-01
 
-### React DOM
+- **Feature:** Support `backdropClassName` on `<Modal>` ([#2723])
+- **Bugfix:** Export `<ToggleButton>` and `<ToggleButtonGroup>` ([#2704])
+- **Bugfix:** Pass through props on `<ToggleButtonGroup>` ([#2731])
+- **Bugfix:** Fix `<ToggleButtonGroup>` in pre-ES2016 environments ([#2731])
 
-* Support string values for the `capture` attribute. ([@maxschmeling](https://github.com/maxschmeling) in [#11424](https://github.com/facebook/react/pull/11424))
+[v0.31.2]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.31.1...v0.31.2
+[#2704]: https://github.com/react-bootstrap/react-bootstrap/pull/2704
+[#2723]: https://github.com/react-bootstrap/react-bootstrap/pull/2723
+[#2731]: https://github.com/react-bootstrap/react-bootstrap/pull/2731
 
-### React DOM Server
 
-* Don't freeze the `ReactDOMServer` public API. ([@travi](https://github.com/travi) in [#11531](https://github.com/facebook/react/pull/11531))
-* Don't emit `autoFocus={false}` attribute on the server. ([@gaearon](https://github.com/gaearon) in [#11543](https://github.com/facebook/react/pull/11543))
+## [v0.31.1]
+> 2017-07-12
 
-### React Reconciler
+- **Feature:** Add `<ToggleButton>` and `<ToggleButtonGroup>` ([#2252], [#2648])
+- **Feature:** Add `<CloseButton>` to top-level API ([#2652])
+- **Bugfix:** Properly handle `title` on `<Checkbox>` and `<Radio>` ([#2635], [#2647])
+- **Bugfix:** Properly handle `onLoad` and `onError` on `<Thumbnail>` ([#2687])
+- **Bugfix:** Properly handle `defaultOpen` on dropdown button components ([#2702])
+- **Chore:** Switch from react-prop-types to prop-types-extra ([#2621])
+- **Chore:** Rebuild UMD bundle with updated dependencies
 
-* Change the hydration API for better Flow typing. ([@sebmarkbage](https://github.com/sebmarkbage) in [#11493](https://github.com/facebook/react/pull/11493))
+[v0.31.1]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.31.0...v0.31.1
+[#2252]: https://github.com/react-bootstrap/react-bootstrap/pull/2252
+[#2621]: https://github.com/react-bootstrap/react-bootstrap/pull/2621
+[#2635]: https://github.com/react-bootstrap/react-bootstrap/pull/2635
+[#2647]: https://github.com/react-bootstrap/react-bootstrap/pull/2647
+[#2648]: https://github.com/react-bootstrap/react-bootstrap/pull/2648
+[#2652]: https://github.com/react-bootstrap/react-bootstrap/pull/2652
+[#2687]: https://github.com/react-bootstrap/react-bootstrap/pull/2687
+[#2702]: https://github.com/react-bootstrap/react-bootstrap/pull/2702
+
+
+## [v0.31.0]
+> 2017-04-26
+
+- **Breaking:** Rename `aria-label` prop to `closeLabel` on ModalHeader  ([#2584])
+- **Breaking:** Remove unused `onClose` callback on Dropdowns (use `onToggle`)  ([#2585])
+- **Breaking:** Increase minimal required React and ReactDOM versions to `0.14.9` or `>=15.3.0` ([#2579])
+- **Bugfix:** Consistently render accessible close buttons for Alerts and Modals  ([#2584])
+
+[v0.31.0]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.10...v0.31.0
+[#2584]: https://github.com/react-bootstrap/react-bootstrap/pull/2584
+[#2585]: https://github.com/react-bootstrap/react-bootstrap/pull/2585
+[#2579]: https://github.com/react-bootstrap/react-bootstrap/pull/2579
 
-## 16.1.0 (November 9, 2017)
 
-### Discontinuing Bower Releases
+## [v0.30.10]
+> 2017-04-21
 
-Starting with 16.1.0, we will no longer be publishing new releases on Bower. You can continue using Bower for old releases, or point your Bower configs to the [React UMD builds hosted on unpkg](https://reactjs.org/docs/installation.html#using-a-cdn) that mirror npm releases and will continue to be updated.
+- **Bugfix:** Move prop-types to normal dependencies ([#2576])
 
-### All Packages
+[v0.30.10]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.9...v0.30.10
+[#2576]: https://github.com/react-bootstrap/react-bootstrap/pull/2576
 
-* Fix an accidental extra global variable in the UMD builds. ([@gaearon](https://github.com/gaearon) in [#10935](https://github.com/facebook/react/pull/10935))
+## [v0.30.9]
+> 2017-04-18
 
-### React
+- **Feature:** Export `<PaginationButton>` ([#2505])
+- **Bugfix:** Support falsy `eventKey` ([#2541])
+- **Chore:** Update for React v15.5 deprecations ([#2552])
 
-* Add support for portals in `React.Children` utilities. ([@MatteoVH](https://github.com/MatteoVH) in [#11378](https://github.com/facebook/react/pull/11378))
-* Warn when a class has a `render` method but doesn't extend a known base class. ([@sw-yx](https://github.com/sw-yx) in [#11168](https://github.com/facebook/react/pull/11168))
-* Improve the warning when accidentally returning an object from constructor. ([@deanbrophy](https://github.com/deanbrophy) in [#11395](https://github.com/facebook/react/pull/11395))
+[v0.30.9]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.8...v0.30.9
+[#2505]: https://github.com/react-bootstrap/react-bootstrap/pull/2505
+[#2541]: https://github.com/react-bootstrap/react-bootstrap/pull/2541
+[#2552]: https://github.com/react-bootstrap/react-bootstrap/pull/2552
 
-### React DOM
 
-* Allow `on` as a custom attribute for AMP. ([@nuc](https://github.com/nuc) in [#11153](https://github.com/facebook/react/pull/11153))
-* Fix `onMouseEnter` and `onMouseLeave` firing on wrong elements. ([@gaearon](https://github.com/gaearon) in [#11164](https://github.com/facebook/react/pull/11164))
-* Fix `null` showing up in a warning instead of the component stack. ([@gaearon](https://github.com/gaearon) in [#10915](https://github.com/facebook/react/pull/10915))
-* Fix IE11 crash in development mode. ([@leidegre](https://github.com/leidegre) in [#10921](https://github.com/facebook/react/pull/10921))
-* Fix `tabIndex` not getting applied to SVG elements. ([@gaearon](https://github.com/gaearon) in [#11034](https://github.com/facebook/react/pull/11034))
-* Fix SVG children not getting cleaned up on `dangerouslySetInnerHTML` in IE. ([@OriR](https://github.com/OriR) in [#11108](https://github.com/facebook/react/pull/11108))
-* Fix false positive text mismatch warning caused by newline normalization. ([@gaearon](https://github.com/gaearon) in [#11119](https://github.com/facebook/react/pull/11119))
-* Fix `form.reset()` to respect `defaultValue` on uncontrolled `<select>`. ([@aweary](https://github.com/aweary) in [#11057](https://github.com/facebook/react/pull/11057))
-* Fix `<textarea>` placeholder not rendering on IE11. ([@gaearon](https://github.com/gaearon) in [#11177](https://github.com/facebook/react/pull/11177))
-* Fix a crash rendering into shadow root. ([@gaearon](https://github.com/gaearon) in [#11037](https://github.com/facebook/react/pull/11037))
-* Fix false positive warning about hydrating mixed case SVG tags. ([@gaearon](https://github.com/gaearon) in [#11174](https://github.com/facebook/react/pull/11174))
-* Suppress the new unknown tag warning for `<dialog>` element. ([@gaearon](https://github.com/gaearon) in [#11035](https://github.com/facebook/react/pull/11035))
-* Warn when defining a non-existent `componentDidReceiveProps` method. ([@iamtommcc](https://github.com/iamtommcc) in [#11479](https://github.com/facebook/react/pull/11479))
-* Warn about function child no more than once. ([@andreysaleba](https://github.com/andreysaleba) in [#11120](https://github.com/facebook/react/pull/11120))
-* Warn about nested updates no more than once. ([@anushreesubramani](https://github.com/anushreesubramani) in [#11113](https://github.com/facebook/react/pull/11113))
-* Deduplicate other warnings about updates. ([@anushreesubramani](https://github.com/anushreesubramani) in [#11216](https://github.com/facebook/react/pull/11216))
-* Include component stack into the warning about `contentEditable` and `children`. ([@Ethan-Arrowood](https://github.com/Ethan-Arrowood) in [#11208](https://github.com/facebook/react/pull/11208))
-* Improve the warning about booleans passed to event handlers. ([@NicBonetto](https://github.com/NicBonetto) in [#11308](https://github.com/facebook/react/pull/11308))
-* Improve the warning when a multiple `select` gets null `value`. ([@Hendeca](https://github.com/Hendeca) in [#11141](https://github.com/facebook/react/pull/11141))
-* Move link in the warning message to avoid redirect. ([@marciovicente](https://github.com/marciovicente) in [#11400](https://github.com/facebook/react/pull/11400))
-* Add a way to suppress the React DevTools installation prompt. ([@gaearon](https://github.com/gaearon) in [#11448](https://github.com/facebook/react/pull/11448))
-* Remove unused code. ([@gaearon](https://github.com/gaearon) in [#10802](https://github.com/facebook/react/pull/10802), [#10803](https://github.com/facebook/react/pull/10803))
-
-### React DOM Server
-
-* Add a new `suppressHydrationWarning` attribute for intentional client/server text mismatches. ([@sebmarkbage](https://github.com/sebmarkbage) in [#11126](https://github.com/facebook/react/pull/11126))
-* Fix markup generation when components return strings. ([@gaearon](https://github.com/gaearon) in [#11109](https://github.com/facebook/react/pull/11109))
-* Fix obscure error message when passing an invalid style value. ([@iamdustan](https://github.com/iamdustan) in [#11173](https://github.com/facebook/react/pull/11173))
-* Include the `autoFocus` attribute into SSR markup. ([@gaearon](https://github.com/gaearon) in [#11192](https://github.com/facebook/react/pull/11192))
-* Include the component stack into more warnings. ([@gaearon](https://github.com/gaearon) in [#11284](https://github.com/facebook/react/pull/11284))
-
-### React Test Renderer and Test Utils
-
-* Fix multiple `setState()` calls in `componentWillMount()` in shallow renderer. ([@Hypnosphi](https://github.com/Hypnosphi) in [#11167](https://github.com/facebook/react/pull/11167))
-* Fix shallow renderer to ignore `shouldComponentUpdate()` after `forceUpdate()`. ([@d4rky-pl](https://github.com/d4rky-pl) in [#11239](https://github.com/facebook/react/pull/11239) and [#11439](https://github.com/facebook/react/pull/11439))
-* Handle `forceUpdate()` and `React.PureComponent` correctly. ([@koba04](https://github.com/koba04) in [#11440](https://github.com/facebook/react/pull/11440))
-* Add back support for running in production mode. ([@gaearon](https://github.com/gaearon) in [#11112](https://github.com/facebook/react/pull/11112))
-* Add a missing `package.json` dependency. ([@gaearon](https://github.com/gaearon) in [#11340](https://github.com/facebook/react/pull/11340))
-
-### React ART
-
-* Add a missing `package.json` dependency. ([@gaearon](https://github.com/gaearon) in [#11341](https://github.com/facebook/react/pull/11341))
-* Expose `react-art/Circle`, `react-art/Rectangle`, and `react-art/Wedge`. ([@gaearon](https://github.com/gaearon) in [#11343](https://github.com/facebook/react/pull/11343))
-
-### React Reconciler (Experimental)
-
-* First release of the [new experimental package](https://github.com/facebook/react/blob/master/packages/react-reconciler/README.md) for creating custom renderers. ([@iamdustan](https://github.com/iamdustan) in [#10758](https://github.com/facebook/react/pull/10758))
-* Add support for React DevTools. ([@gaearon](https://github.com/gaearon) in [#11463](https://github.com/facebook/react/pull/11463))
-
-### React Call Return (Experimental)
-
-* First release of the [new experimental package](https://github.com/facebook/react/tree/master/packages/react-call-return) for parent-child communication. ([@gaearon](https://github.com/gaearon) in [#11364](https://github.com/facebook/react/pull/11364))
-
-## 16.0.0 (September 26, 2017)
-
-### New JS Environment Requirements
-
- * React 16 depends on the collection types [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set), as well as [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame). If you support older browsers and devices which may not yet provide these natively (e.g. <IE11), [you may want to include a polyfill](https://gist.github.com/gaearon/9a4d54653ae9c50af6c54b4e0e56b583).
-
-### New Features
-* Components can now return arrays and strings from `render`. (Docs coming soon!)
-* Improved error handling with introduction of "error boundaries". [Error boundaries](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html) are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
-* First-class support for declaratively rendering a subtree into another DOM node with `ReactDOM.createPortal()`. (Docs coming soon!)
-* Streaming mode for server side rendering is enabled with `ReactDOMServer.renderToNodeStream()` and `ReactDOMServer.renderToStaticNodeStream()`. ([@aickin](https://github.com/aickin) in [#10425](https://github.com/facebook/react/pull/10425), [#10044](https://github.com/facebook/react/pull/10044), [#10039](https://github.com/facebook/react/pull/10039), [#10024](https://github.com/facebook/react/pull/10024), [#9264](https://github.com/facebook/react/pull/9264), and others.)
-* [React DOM now allows passing non-standard attributes](https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html). ([@nhunzaker](https://github.com/nhunzaker) in [#10385](https://github.com/facebook/react/pull/10385), [10564](https://github.com/facebook/react/pull/10564), [#10495](https://github.com/facebook/react/pull/10495) and others)
+## [v0.30.8]
+> 2017-03-07
 
-### Breaking Changes
-- There are several changes to the behavior of scheduling and lifecycle methods:
-  * `ReactDOM.render()` and `ReactDOM.unstable_renderIntoContainer()` now return `null` if called from inside a lifecycle method.
-    * To work around this, you can either use [the new portal API](https://github.com/facebook/react/issues/10309#issuecomment-318433235) or [refs](https://github.com/facebook/react/issues/10309#issuecomment-318434635).
-  * Minor changes to `setState` behavior:
-    * Calling `setState` with null no longer triggers an update. This allows you to decide in an updater function if you want to re-render.
-    * Calling `setState` directly in render always causes an update. This was not previously the case. Regardless, you should not be calling `setState` from render.
-    * `setState` callback (second argument) now fires immediately after `componentDidMount` / `componentDidUpdate` instead of after all components have rendered.
-  * When replacing `<A />` with `<B />`,  `B.componentWillMount` now always happens before  `A.componentWillUnmount`. Previously, `A.componentWillUnmount` could fire first in some cases.
-  * Previously, changing the `ref` to a component would always detach the ref before that component's render is called. Now, we change the `ref` later, when applying the changes to the DOM.
-  * It is not safe to re-render into a container that was modified by something other than React. This worked previously in some cases but was never supported. We now emit a warning in this case. Instead you should clean up your component trees using `ReactDOM.unmountComponentAtNode`. [See this example.](https://github.com/facebook/react/issues/10294#issuecomment-318820987)
-  * `componentDidUpdate` lifecycle no longer receives `prevContext` param. ([@bvaughn](https://github.com/bvaughn) in [#8631](https://github.com/facebook/react/pull/8631))
-  * Non-unique keys may now cause children to be duplicated and/or omitted. Using non-unique keys is not (and has never been) supported, but previously it was a hard error.
-  * Shallow renderer no longer calls `componentDidUpdate()` because DOM refs are not available. This also makes it consistent with `componentDidMount()` (which does not get called in previous versions either).
-  * Shallow renderer does not implement `unstable_batchedUpdates()` anymore.
-  * `ReactDOM.unstable_batchedUpdates` now only takes one extra argument after the callback.
-- The names and paths to the single-file browser builds have changed to emphasize the difference between development and production builds. For example:
-  - `react/dist/react.js` → `react/umd/react.development.js`
-  - `react/dist/react.min.js` → `react/umd/react.production.min.js`
-  - `react-dom/dist/react-dom.js` → `react-dom/umd/react-dom.development.js`
-  - `react-dom/dist/react-dom.min.js` → `react-dom/umd/react-dom.production.min.js`
-* The server renderer has been completely rewritten, with some improvements:
-  * Server rendering does not use markup validation anymore, and instead tries its best to attach to existing DOM, warning about inconsistencies. It also doesn't use comments for empty components and data-reactid attributes on each node anymore.
-  * Hydrating a server rendered container now has an explicit API. Use `ReactDOM.hydrate` instead of `ReactDOM.render` if you're reviving server rendered HTML. Keep using `ReactDOM.render` if you're just doing client-side rendering.
-* When "unknown" props are passed to DOM components, for valid values, React will now render them in the DOM. [See this post for more details.](https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html) ([@nhunzaker](https://github.com/nhunzaker) in [#10385](https://github.com/facebook/react/pull/10385), [10564](https://github.com/facebook/react/pull/10564), [#10495](https://github.com/facebook/react/pull/10495) and others)
-* Errors in the render and lifecycle methods now unmount the component tree by default. To prevent this, add [error boundaries](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html) to the appropriate places in the UI.
+- **Feature:** Support `bsSize` on `<FormControl>` ([#2382], [#2394])
+- **Feature:** Pass event and event source to `onToggle` callback for `<Dropdown>` ([#2422])
+- **Feature:** Add `restoreFocus` to `<Modal>` ([#2482])
+- **Feature:** Add `mountOnEnter` to transition and tab components ([#2504])
+- **Bugfix:** Don't set `aria-describedby` in `<OverlayTrigger>` when not showing the overlay ([#2359])
+- **Bugfix:** Fix `boundaryLinks` in `<Pagination>` ([#2443])
+- **Bugfix:** Support `closeButton` in `<Modal.Header>` in static modals ([#2453])
+- **Bugfix:** Fix `<Carousel>` with `slide` disabled ([#2466])
 
-### Removed Deprecations
+[v0.30.8]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.7...v0.30.8
+[#2359]: https://github.com/react-bootstrap/react-bootstrap/pull/2359
+[#2382]: https://github.com/react-bootstrap/react-bootstrap/pull/2382
+[#2394]: https://github.com/react-bootstrap/react-bootstrap/pull/2394
+[#2422]: https://github.com/react-bootstrap/react-bootstrap/pull/2422
+[#2443]: https://github.com/react-bootstrap/react-bootstrap/pull/2443
+[#2453]: https://github.com/react-bootstrap/react-bootstrap/pull/2453
+[#2466]: https://github.com/react-bootstrap/react-bootstrap/pull/2466
+[#2482]: https://github.com/react-bootstrap/react-bootstrap/pull/2482
+[#2504]: https://github.com/react-bootstrap/react-bootstrap/pull/2504
 
-- There is no `react-with-addons.js` build anymore. All compatible addons are published separately on npm, and have single-file browser versions if you need them.
-- The deprecations introduced in 15.x have been removed from the core package. `React.createClass` is now available as create-react-class, `React.PropTypes` as prop-types, `React.DOM` as react-dom-factories, react-addons-test-utils as react-dom/test-utils, and shallow renderer as react-test-renderer/shallow. See [15.5.0](https://reactjs.org/blog/2017/04/07/react-v15.5.0.html) and [15.6.0](https://reactjs.org/blog/2017/06/13/react-v15.6.0.html) blog posts for instructions on migrating code and automated codemods.
 
-## 15.6.2 (September 25, 2017)
+## [v0.30.7]
+> 2016-11-22
 
-### All Packages
-* Switch from BSD + Patents to MIT license
+- **Feature:** Add `componentClass` to `<Modal.Body>`, `<Modal.Footer>`, and `<Modal.Title>` ([#2313])
+- **Feature:** Add `inputRef` to `<FormControl>` ([#2337])
+- **Bugfix:** Pass `onMouseEnter` and `onMouseLeave` to `<Dropdown>` rather than `<Dropdown.Toggle>` from `<DropdownButton>` and related components ([#2335])
+- **Refactor:** Remove unused `shouldRenderFill` method on `<Panel>` ([#2316])
+- **Docs:** Explicitly add `placement` to `<Overlay>` `propTypes` for generated documentation ([#2318])
+- **Docs:** Explicitly document use of `null` (and `undefined`) `validationState` on `<FormGroup>` ([#2336])
 
-### React DOM
+[v0.30.7]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.6...v0.30.7
+[#2313]: https://github.com/react-bootstrap/react-bootstrap/pull/2313
+[#2316]: https://github.com/react-bootstrap/react-bootstrap/pull/2316
+[#2318]: https://github.com/react-bootstrap/react-bootstrap/pull/2318
+[#2335]: https://github.com/react-bootstrap/react-bootstrap/pull/2335
+[#2336]: https://github.com/react-bootstrap/react-bootstrap/pull/2336
+[#2337]: https://github.com/react-bootstrap/react-bootstrap/pull/2337
 
-* Fix a bug where modifying `document.documentMode` would trigger IE detection in other browsers, breaking change events. ([@aweary](https://github.com/aweary) in [#10032](https://github.com/facebook/react/pull/10032))
-* CSS Columns are treated as unitless numbers. ([@aweary](https://github.com/aweary) in [#10115](https://github.com/facebook/react/pull/10115))
-* Fix bug in QtWebKit when wrapping synthetic events in proxies. ([@walrusfruitcake](https://github.com/walrusfruitcake) in [#10115](https://github.com/facebook/react/pull/10011))
-* Prevent event handlers from receiving extra argument in development. ([@aweary](https://github.com/aweary) in [#10115](https://github.com/facebook/react/pull/8363))
-* Fix cases where `onChange` would not fire with `defaultChecked` on radio inputs. ([@jquense](https://github.com/jquense) in [#10156](https://github.com/facebook/react/pull/10156))
-* Add support for `controlList` attribute to DOM property whitelist ([@nhunzaker](https://github.com/nhunzaker) in [#9940](https://github.com/facebook/react/pull/9940))
-* Fix a bug where creating an element with a ref in a constructor did not throw an error in development. ([@iansu](https://github.com/iansu) in [#10025](https://github.com/facebook/react/pull/10025))
 
-## 15.6.1 (June 14, 2017)
+## [v0.30.6]
+> 2016-10-28
+
+- **Feature:** Add `rootCloseEvent` to `<Dropdown>` to configure root close trigger event ([#2195])
+- **Feature:** Add screen reader labels configurable with `prevLabel` and `nextLabel` to `<Carousel>` controls ([#2275])
+- **Feature:** Add `collapseOnSelect` to `<Navbar>` to enable automatically collapsing the navbar when the user selects an item ([#2280], [#2308])
+- **Bugfix:** Change placeholder `href` in `<SafeAnchor>` to `#` for better IE compatibility ([#2080])
+- **Bugfix:** Fix off-by-one error in displaying `<Pagination>` pages ([#2271])
+- **Bugfix:** Properly set `.collapsed` on `<Panel>` title anchor ([#2276])
+
+[v0.30.6]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.5...v0.30.6
+[#2080]: https://github.com/react-bootstrap/react-bootstrap/pull/2080
+[#2195]: https://github.com/react-bootstrap/react-bootstrap/pull/2195
+[#2271]: https://github.com/react-bootstrap/react-bootstrap/pull/2271
+[#2275]: https://github.com/react-bootstrap/react-bootstrap/pull/2275
+[#2276]: https://github.com/react-bootstrap/react-bootstrap/pull/2276
+[#2280]: https://github.com/react-bootstrap/react-bootstrap/pull/2280
+[#2308]: https://github.com/react-bootstrap/react-bootstrap/pull/2308
+
+
+## [v0.30.5]
+> 2016-10-03
+
+- **Bugfix:** Fix opening `<Dropdown>` ([#2244], [#2251])
+
+[v0.30.5]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.4...v0.30.5
+[#2244]: https://github.com/react-bootstrap/react-bootstrap/pull/2244
+[#2251]: https://github.com/react-bootstrap/react-bootstrap/pull/2251
+
+
+## [v0.30.4]
+> 2016-09-30
+
+- **Bugfix:** Properly set `aria-expanded` on `<Panel>` headers ([#2137])
+- **Bugfix:** Fix off-by-one bug in `<Pagination>` [#2189]
+- **Bugfix:** Persist `<Dropdown.Menu>` instance across visibility changes ([#2241])
+
+[v0.30.4]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.3...v0.30.4
+[#2137]: https://github.com/react-bootstrap/react-bootstrap/pull/2137
+[#2189]: https://github.com/react-bootstrap/react-bootstrap/pull/2189
+[#2241]: https://github.com/react-bootstrap/react-bootstrap/pull/2241
+
+
+## [v0.30.3]
+> 2016-08-20
+
+- **Feature:** Support dropdowns in tab navigation ([#2134])
+- **Bugfix:** Properly pass expanded state to collapsible header elements ([#2133], [#2137])
 
-### React DOM
+[v0.30.3]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.2...v0.30.3
+[#2133]: https://github.com/react-bootstrap/react-bootstrap/pull/2133
+[#2134]: https://github.com/react-bootstrap/react-bootstrap/pull/2134
+[#2137]: https://github.com/react-bootstrap/react-bootstrap/pull/2137
+
+
+## [v0.30.2]
+> 2016-08-04
+
+- **Chore:** Upgrade to Babel 6 ([#2108])
+- **Chore:** Add ES module build ([#2108])
 
-* Fix a crash on iOS Safari. ([@jquense](https://github.com/jquense) in [#9960](https://github.com/facebook/react/pull/9960))
-* Don't add `px` to custom CSS property values. ([@TrySound](https://github.com/TrySound) in [#9966](https://github.com/facebook/react/pull/9966))
+[v0.30.2]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.1...v0.30.2
+[#2108]: https://github.com/react-bootstrap/react-bootstrap/pull/2108
 
-## 15.6.0 (June 13, 2017)
 
-### React
+## [v0.30.1]
+> 2016-08-01
 
-* Downgrade deprecation warnings to use `console.warn` instead of `console.error`. ([@flarnie](https://github.com/flarnie) in [#9753](https://github.com/facebook/react/pull/9753))
-* Add a deprecation warning for `React.createClass`. Points users to `create-react-class` instead. ([@flarnie](https://github.com/flarnie) in [#9771](https://github.com/facebook/react/pull/9771))
-* Add deprecation warnings and separate module for `React.DOM` factory helpers. ([@nhunzaker](https://github.com/nhunzaker) in [#8356](https://github.com/facebook/react/pull/8356))
-* Warn for deprecation of `React.createMixin` helper, which was never used. ([@aweary](https://github.com/aweary) in [#8853](https://github.com/facebook/react/pull/8853))
+- **Bugfix:** Don't trigger PropTypes warning ([#2095])
+- **Bugfix:** Fix regression with `rootClose` on `<OverlayTrigger>` ([#2099])
 
-### React DOM
+[v0.30.1]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.30.0...v0.30.1
+[#2095]: https://github.com/react-bootstrap/react-bootstrap/pull/2095
+[#2099]: https://github.com/react-bootstrap/react-bootstrap/pull/2099
 
-* Add support for CSS variables in `style` attribute. ([@aweary](https://github.com/aweary) in [#9302](https://github.com/facebook/react/pull/9302))
-* Add support for CSS Grid style properties. ([@ericsakmar](https://github.com/ericsakmar) in [#9185](https://github.com/facebook/react/pull/9185))
-* Fix bug where inputs mutated value on type conversion. ([@nhunzaker](https://github.com/mhunzaker) in [#9806](https://github.com/facebook/react/pull/9806))
-* Fix issues with `onChange` not firing properly for some inputs. ([@jquense](https://github.com/jquense) in [#8575](https://github.com/facebook/react/pull/8575))
-* Fix bug where controlled number input mistakenly allowed period. ([@nhunzaker](https://github.com/nhunzaker) in [#9584](https://github.com/facebook/react/pull/9584))
-* Fix bug where performance entries were being cleared. ([@chrisui](https://github.com/chrisui) in [#9451](https://github.com/facebook/react/pull/9451))
 
-### React Addons
+## [v0.30.0]
+> 2016-07-25
 
-* Fix AMD support for addons depending on `react`. ([@flarnie](https://github.com/flarnie) in [#9919](https://github.com/facebook/react/issues/9919))
-* Fix `isMounted()` to return `true` in `componentWillUnmount`. ([@mridgway](https://github.com/mridgway) in [#9638](https://github.com/facebook/react/issues/9638))
-* Fix `react-addons-update` to not depend on native `Object.assign`. ([@gaearon](https://github.com/gaearon) in [#9937](https://github.com/facebook/react/pull/9937))
-* Remove broken Google Closure Compiler annotation from `create-react-class`. ([@gaearon](https://github.com/gaearon) in [#9933](https://github.com/facebook/react/pull/9933))
-* Remove unnecessary dependency from `react-linked-input`. ([@gaearon](https://github.com/gaearon) in [#9766](https://github.com/facebook/react/pull/9766))
-* Point `react-addons-(css-)transition-group` to the new package. ([@gaearon](https://github.com/gaearon) in [#9937](https://github.com/facebook/react/pull/9937))
+- **Breaking:** Remove `linkId` prop from `<Breadcrumb.Item>` for consistency with other wrapped link components ([#2011])
+- **Breaking:** Remove deprecated functionality from v0.29.x ([#2017])
+- **Breaking:** Remove redundant `caption` prop from `<Carousel.Item>`, as this functionality is available from `<Carousel.Caption>` ([#2018])
+- **Breaking:** Remove pointless `navItem` and `navDropdown` props from `<Button>` ([#2026])
+- **Feature/Deprecation:** Rename `<PageItem>` to `<Pager.Item>` for consistency ([#1976])
+- **Feature:** Add `ValidComponentChildren.toArray` ([#2016])
+- **Feature:** Add `bsClass` support consistently throughout all components ([#2026], [#2036], [#2079])
+- **Feature:** Add `splitBsProps` and `splitBsPropsAndOmit` helpers to `bootstrapUtils` to remove Bootstrap styling props ([#2052])
+- **Feature:** Improve IE8-compatible self collapse support on `<Badge>` and add it to `<Label>` ([#2026])
+- **Bugfix:** Support `style` on `<Modal>` ([#1957])
+- **Bugfix:** Support `bsClass` on `<Dropdown.Toggle>` ([#2014])
+- **Bugfix:** Support `active` on `<NavDropdown>` ([#2015])
+- **Bugfix:** Do not pass arbitrary props to DOM nodes ([#2026], [#2036], [#2044])
+- **Bugfix:** Support strings for `positionTop` and `positionLeft` on `<Popover>` and `<Tooltip>` ([#2026])
+- **Bugfix:** Support captions on `<Thumbnail>` links ([#2026])
+- **Bugfix:** Don't ignore `componentClass` on `<ListGroup>` when using only `<ListGroupItem>` children ([#2026])
+- **Bugfix:** Don't assign default `key` to `<Breadcrumb>`, `<Carousel>`, `<ListGroup>`, `<Nav>`, `<PanelGroup>`, `<Pager>`, or `<ProgressBar>` children ([#2026], [#2036])
+- **Bugfix:** Remove pointless update-deferral-during-`onSelect` logic in `<PanelGroup>` ([#2026])
+- **Bugfix:** Use consistent `bsClass` handling on dropdown components ([#2036])
+- **Bugfix:** Remove extraneous `.collapsed` on collapsible panel title anchor ([#2036])
+- **Bugfix:** Improve edge case handling in tab animation state management and styling ([#2036])
+- **Bugfix:** Stop assigning refs unnecessarily ([#2078])
+- **Refactor:** Clean up context usage on navbar components ([#2036])
+- **Refactor:** Sync up context usage on modals to other components ([#2044])
+
+[v0.30.0]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.29.5...v0.30.0
+[#1957]: https://github.com/react-bootstrap/react-bootstrap/pull/1957
+[#1976]: https://github.com/react-bootstrap/react-bootstrap/pull/1976
+[#2011]: https://github.com/react-bootstrap/react-bootstrap/pull/2011
+[#2014]: https://github.com/react-bootstrap/react-bootstrap/pull/2014
+[#2015]: https://github.com/react-bootstrap/react-bootstrap/pull/2015
+[#2016]: https://github.com/react-bootstrap/react-bootstrap/pull/2016
+[#2017]: https://github.com/react-bootstrap/react-bootstrap/pull/2017
+[#2018]: https://github.com/react-bootstrap/react-bootstrap/pull/2018
+[#2026]: https://github.com/react-bootstrap/react-bootstrap/pull/2026
+[#2036]: https://github.com/react-bootstrap/react-bootstrap/pull/2036
+[#2044]: https://github.com/react-bootstrap/react-bootstrap/pull/2044
+[#2052]: https://github.com/react-bootstrap/react-bootstrap/pull/2052
+[#2078]: https://github.com/react-bootstrap/react-bootstrap/pull/2078
+[#2079]: https://github.com/react-bootstrap/react-bootstrap/pull/2079
+
+
+## [v0.29.5]
+> 2016-06-18
+
+- **Feature:** Allow function refs on dropdown components ([#1948])
+- **Bugfix:** Fix bugs with tab selection and state management ([#1956])
+
+[v0.29.5]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.29.4...v0.29.5
+[#1948]: https://github.com/react-bootstrap/react-bootstrap/pull/1948
+[#1956]: https://github.com/react-bootstrap/react-bootstrap/pull/1956
+
+
+## [v0.29.4]
+> 2016-05-10
+
+- **Feature:** Add `inputRef` to `<Checkbox>` and `<Radio>` ([#1865])
+- **Bugfix:** Persist `<Panel>` events before modifying them ([#1864])
+- **Bugfix:** Add back `eventKey` to props for custom pagination buttons ([#1876])
+
+[v0.29.4]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.29.3...v0.29.4
+[#1864]: https://github.com/react-bootstrap/react-bootstrap/pull/1864
+[#1865]: https://github.com/react-bootstrap/react-bootstrap/pull/1865
+[#1876]: https://github.com/react-bootstrap/react-bootstrap/pull/1876
+
+
+## [v0.29.3]
+> 2016-04-28
+
+- **Feature:** Add `unmountOnExit` support to tabs ([#1823])
+- **Bugfix:** Do not pass `onSelect` to DOM nodes ([#1861])
+- **Bugfix:** Do not throw error when tab group has no panes ([#1862])
+- **Bugfix:** Fix setting `id` for `<NavItem>`s for tabs ([#1862])
+
+[v0.29.3]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.29.2...v0.29.3
+[#1823]: https://github.com/react-bootstrap/react-bootstrap/pull/1823
+[#1861]: https://github.com/react-bootstrap/react-bootstrap/pull/1861
+[#1862]: https://github.com/react-bootstrap/react-bootstrap/pull/1862
+
+
+## [v0.29.2]
+> 2016-04-22
+
+- **Bugfix:** Don't always set `tabIndex` on `<SafeAnchor>` ([#1844])
+
+[v0.29.2]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.29.1...v0.29.2
+[#1844]: https://github.com/react-bootstrap/react-bootstrap/pull/1844
+
+
+## [v0.29.1]
+> 2016-04-21
+
+- **Bugfix:** Don't incorrectly pass `onSelect` past `<TabContainer>` ([#1825])
+- **Bugfix:** Set `role` instead of `type` on `<Dropdown.Toggle>` button ([#1835])
+
+[v0.29.1]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.29.0...v0.29.1
+[#1825]: https://github.com/react-bootstrap/react-bootstrap/pull/1825
+[#1835]: https://github.com/react-bootstrap/react-bootstrap/pull/1835
+
+
+## [v0.29.0]
+> 2016-04-18
 
-## 15.5.4 (April 11, 2017)
+- **Breaking:** Change `onSelect` signature to be `(eventKey: any, event: SyntheticEvent) => any` on all React-Bootstrap components, instead of the old inconsistent mishmash ([#1604], [#1677], [#1756])
+- **Breaking:** Remove deprecated `duration` on transition components ([#1608])
+- **Breaking:** Remove deprecated functionality from `<Nav>`, `<Navbar>`, and related components ([#1608], [#1745])
+- **Breaking:** Don't check for prefixed `bsStyle` in `bootstrapUtils.getClassSet` ([#1759])
+- **Breaking:** Disable click handlers on `disabled` components ([#1794])
+- **Breaking:** In components with wrapped anchors, pass through all props other than `className` and `style` to the wrapped anchor ([#1801])
+- **Breaking:** Use consistent exports from `bootstrapUtils` ([#1813])
+- **Feature/Deprecation:** Add lower-level tab components, and deprecate horizontal layout support in `<Tabs>` in favor of lower-level components ([#1607], [#1784])
+- **Feature/Deprecation:** Deprecate `dialogComponent` in favor of new `dialogComponentClass` on `<Modal>` for consistency with other components ([#1753])
+- **Feature/Deprecation:** Rewrite form and form control API (`<FormControl>`, &c.), and deprecate the old API (`<Input>`, &c.) ([#1765])
+- **Deprecation:** Deprecate `dismissAfter` on `<Alert>` ([#1636])
+- **Deprecation:** Deprecate label interpolation (e.g. `label="%(percent)s%"`) in `<ProgressBar>` ([#1751])
+- **Bugfix:** Set `collapsed` class on `<Navbar.Toggle>` ([#1733])
 
-### React Addons
-* **Critical Bugfix:** Update the version of `prop-types` to fix critical bug.  ([@gaearon](https://github.com/gaearon) in [545c87f](https://github.com/facebook/react/commit/545c87fdc348f82eb0c3830bef715ed180785390))
-* Fix `react-addons-create-fragment` package to include `loose-envify` transform for Browserify users. ([@mridgway](https://github.com/mridgway) in [#9642](https://github.com/facebook/react/pull/9642))
+[v0.29.0]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.28.5...v0.29.0
+[#1604]: https://github.com/react-bootstrap/react-bootstrap/pull/1604
+[#1607]: https://github.com/react-bootstrap/react-bootstrap/pull/1607
+[#1608]: https://github.com/react-bootstrap/react-bootstrap/pull/1608
+[#1636]: https://github.com/react-bootstrap/react-bootstrap/pull/1636
+[#1677]: https://github.com/react-bootstrap/react-bootstrap/pull/1677
+[#1733]: https://github.com/react-bootstrap/react-bootstrap/pull/1733
+[#1745]: https://github.com/react-bootstrap/react-bootstrap/pull/1745
+[#1751]: https://github.com/react-bootstrap/react-bootstrap/pull/1751
+[#1753]: https://github.com/react-bootstrap/react-bootstrap/pull/1753
+[#1756]: https://github.com/react-bootstrap/react-bootstrap/pull/1756
+[#1759]: https://github.com/react-bootstrap/react-bootstrap/pull/1759
+[#1765]: https://github.com/react-bootstrap/react-bootstrap/pull/1765
+[#1784]: https://github.com/react-bootstrap/react-bootstrap/pull/1784
+[#1794]: https://github.com/react-bootstrap/react-bootstrap/pull/1794
+[#1801]: https://github.com/react-bootstrap/react-bootstrap/pull/1801
+[#1813]: https://github.com/react-bootstrap/react-bootstrap/pull/1813
 
-### React Test Renderer
-* Fix compatibility with Enzyme by exposing `batchedUpdates` on shallow renderer. ([@gaearon](https://github.com/gaearon) in [9382](https://github.com/facebook/react/commit/69933e25c37cf5453a9ef132177241203ee8d2fd))
 
-## 15.5.3 (April 7, 2017)
+## [v0.28.5]
+> 2016-04-01
 
-**Note: this release has a critical issue and was deprecated. Please update to 15.5.4 or higher.**
+- **Feature:** Support `<Breadcrumb.Item>` in addition to `<BreadcrumbItem>` for breadcrumb items ([#1722])
+- **Feature:** Add `<Carousel.Caption>` for carousel captions ([#1734])
+- **Feature:** Support `<Carousel.Item>` in addition to `<CarouselItem>` for carousel items ([#1740])
+- **Feature:** Add `<Clearfix>` for grids ([#1736])
+- **Bugfix:** Support `style` on nested `<ProgressBar>` ([#1719])
+- **Bugfix:** Fix CommonJS export for `<Media>` ([#1737])
+- **Bugfix:** Support `className` and `style` on `<MenuItem header>` and `<MenuItem divider>` ([#1748])
+- **Bugfix:** Support extra props for `<Navbar.Header>` and `<Navbar.Toggle>` ([#1754])
 
-### React Addons
-* Fix `react-addons-create-fragment` package to export correct thing. ([@gaearon](https://github.com/gaearon) in [#9385](https://github.com/facebook/react/pull/9383))
-* Fix `create-react-class` package to include `loose-envify` transform for Browserify users. ([@mridgway](https://github.com/mridgway) in [#9642](https://github.com/facebook/react/pull/9642))
+[v0.28.5]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.28.4...v0.28.5
+[#1719]: https://github.com/react-bootstrap/react-bootstrap/pull/1719
+[#1722]: https://github.com/react-bootstrap/react-bootstrap/pull/1722
+[#1734]: https://github.com/react-bootstrap/react-bootstrap/pull/1734
+[#1736]: https://github.com/react-bootstrap/react-bootstrap/pull/1736
+[#1737]: https://github.com/react-bootstrap/react-bootstrap/pull/1737
+[#1740]: https://github.com/react-bootstrap/react-bootstrap/pull/1740
+[#1748]: https://github.com/react-bootstrap/react-bootstrap/pull/1748
+[#1754]: https://github.com/react-bootstrap/react-bootstrap/pull/1754
 
-## 15.5.2 (April 7, 2017)
 
-**Note: this release has a critical issue and was deprecated. Please update to 15.5.4 or higher.**
+## [v0.28.4]
+> 2016-03-24
 
-### React Addons
-* Fix the production single-file builds to not include the development code. ([@gaearon](https://github.com/gaearon) in [#9385](https://github.com/facebook/react/pull/9383))
-* Apply better minification to production single-file builds. ([@gaearon](https://github.com/gaearon) in [#9385](https://github.com/facebook/react/pull/9383))
-* Add missing and remove unnecessary dependencies to packages. ([@gaearon](https://github.com/gaearon) in [#9385](https://github.com/facebook/react/pull/9383))
+- **Feature:** Add `componentClass` on `<FormControls.Static>` ([#1653])
+- **Feature:** Add transition hooks on collapsible `<Panel>` ([#1664])
+- **Feature:** Add `<Media>` and related components ([#1707])
+- **Bugfix:** Support `className` on `<MenuItem divider>` ([#1682])
+- **Bugfix:** Support `className` on `<Navbar.Header>` ([#1695])
 
-## 15.5.1 (April 7, 2017)
+[v0.28.4]: https://github.com/react-bootstrap/react-bootstrap/compare/v0.28.3...v0.28.4
+[#1653]: https://github.com/react-bootstrap/react-bootstrap/pull/1653
+[#1664]: https://github.com/react-bootstrap/react-bootstrap/pull/1664
+[#1682]: https://github.com/react-bootstrap/react-bootstrap/pull/1682
+[#1695]: https://github.com/react-bootstrap/react-bootstrap/pull/1695
+[#1707]: https://github.com/react-bootstrap/react-bootstrap/pull/1707
 
-**Note: this release has a critical issue and was deprecated. Please update to 15.5.4 or higher.**
 
-### React
-* Fix erroneous PropTypes access warning. ([@acdlite](https://github.com/acdlite) in ([ec97ebb](https://github.com/facebook/react/commit/ec97ebbe7f15b58ae2f1323df39d06f119873344))
+v0.28.3 - Thu, 11 Feb 2016 00:00:42 GMT
+---------------------------------------
 
-## 15.5.0 (April 7, 2017)
+- [922ecae](../../commit/922ecae) [fixed] Allow overriding aria-label on <SplitButton> toggle
+- [f187e04](../../commit/f187e04) [fixed] Use actual ellipsis in pagination
+- [f4c1525](../../commit/f4c1525) [added] pagination boundaryLinks
+- [9331141](../../commit/9331141) [fixed] remove extra tabIndex
 
-**Note: this release has a critical issue and was deprecated. Please update to 15.5.4 or higher.**
 
-### React
-* <s>Added a deprecation warning for `React.createClass`. Points users to create-react-class instead. ([@acdlite](https://github.com/acdlite) in [#d9a4fa4](https://github.com/facebook/react/commit/d9a4fa4f51c6da895e1655f32255cf72c0fe620e))</s>
-* Added a deprecation warning for `React.PropTypes`. Points users to prop-types instead. ([@acdlite](https://github.com/acdlite) in [#043845c](https://github.com/facebook/react/commit/043845ce75ea0812286bbbd9d34994bb7e01eb28))
-* Fixed an issue when using `ReactDOM` together with `ReactDOMServer`. ([@wacii](https://github.com/wacii) in [#9005](https://github.com/facebook/react/pull/9005))
-* Fixed issue with Closure Compiler. ([@anmonteiro](https://github.com/anmonteiro) in [#8895](https://github.com/facebook/react/pull/8895))
-* Another fix for Closure Compiler. ([@Shastel](https://github.com/Shastel) in [#8882](https://github.com/facebook/react/pull/8882))
-* Added component stack info to invalid element type warning. ([@n3tr](https://github.com/n3tr) in [#8495](https://github.com/facebook/react/pull/8495))
 
-### React DOM
-* Fixed Chrome bug when backspacing in number inputs. ([@nhunzaker](https://github.com/nhunzaker) in [#7359](https://github.com/facebook/react/pull/7359))
-* Added `react-dom/test-utils`, which exports the React Test Utils. ([@bvaughn](https://github.com/bvaughn))
+v0.28.2 - Fri, 08 Jan 2016 06:38:06 GMT
+---------------------------------------
 
-### React Test Renderer
-* Fixed bug where `componentWillUnmount` was not called for children. ([@gre](https://github.com/gre) in [#8512](https://github.com/facebook/react/pull/8512))
-* Added `react-test-renderer/shallow`, which exports the shallow renderer. ([@bvaughn](https://github.com/bvaughn))
+- [1bee8a2](../../commit/1bee8a2) [added] responsively hiding columns
+- [653bb17](../../commit/653bb17) [fixed] a11y: setting tabIndex="-1" for the dismiss button of Alerts since aria-hidden="true"
+- [1d07197](../../commit/1d07197) [fixed] don't add aria-label to modal header and close button
+- [035e553](../../commit/035e553) [fixed] navbar-default not added for custom styles
 
-### React Addons
-* Last release for addons; they will no longer be actively maintained.
-* Removed `peerDependencies` so that addons continue to work indefinitely. ([@acdlite](https://github.com/acdlite) and [@bvaughn](https://github.com/bvaughn) in [8a06cd7](https://github.com/facebook/react/commit/8a06cd7a786822fce229197cac8125a551e8abfa) and [67a8db3](https://github.com/facebook/react/commit/67a8db3650d724a51e70be130e9008806402678a))
-* Updated to remove references to `React.createClass` and `React.PropTypes` ([@acdlite](https://github.com/acdlite) in [12a96b9](https://github.com/facebook/react/commit/12a96b94823d6b6de6b1ac13bd576864abd50175))
-* `react-addons-test-utils` is deprecated. Use `react-dom/test-utils` and `react-test-renderer/shallow` instead. ([@bvaughn](https://github.com/bvaughn))
 
-## 15.4.2 (January 6, 2017)
 
-### React
-* Fixed build issues with the Brunch bundler. ([@gaearon](https://github.com/gaearon) in [#8686](https://github.com/facebook/react/pull/8686))
-* Improved error messages for invalid element types. ([@sophiebits](https://github.com/sophiebits) in [#8612](https://github.com/facebook/react/pull/8612))
-* Removed a warning about `getInitialState` when `this.state` is set. ([@bvaughn](https://github.com/bvaughn) in [#8594](https://github.com/facebook/react/pull/8594))
-* Removed some dead code. ([@diegomura](https://github.com/diegomura) in [#8050](https://github.com/facebook/react/pull/8050), [@dfrownfelter](https://github.com/dfrownfelter) in [#8597](https://github.com/facebook/react/pull/8597))
+v0.28.1 - Mon, 16 Nov 2015 20:04:34 GMT
+---------------------------------------
 
-### React DOM
-* Fixed a decimal point issue on uncontrolled number inputs. ([@nhunzaker](https://github.com/nhunzaker) in [#7750](https://github.com/facebook/react/pull/7750))
-* Fixed rendering of textarea placeholder in IE11. ([@aweary](https://github.com/aweary) in [#8020](https://github.com/facebook/react/pull/8020))
-* Worked around a script engine bug in IE9. ([@eoin](https://github.com/eoin) in [#8018](https://github.com/facebook/react/pull/8018))
 
-### React Addons
-* Fixed build issues in RequireJS and SystemJS environments. ([@gaearon](https://github.com/gaearon) in [#8686](https://github.com/facebook/react/pull/8686))
-* Added missing package dependencies. ([@kweiberth](https://github.com/kweiberth) in [#8467](https://github.com/facebook/react/pull/8467))
 
-## 15.4.1 (November 22, 2016)
 
-### React
-* Restructure variable assignment to work around a Rollup bug ([@gaearon](https://github.com/gaearon) in [#8384](https://github.com/facebook/react/pull/8384))
 
-### React DOM
-* Fixed event handling on disabled button elements ([@sophiebits](https://github.com/sophiebits) in [#8387](https://github.com/facebook/react/pull/8387))
-* Fixed compatibility of browser build with AMD environments ([@zpao](https://github.com/zpao) in [#8374](https://github.com/facebook/react/pull/8374))
+v0.28.0 - Mon, 16 Nov 2015 18:42:38 GMT
+---------------------------------------
 
-## 15.4.0 (November 16, 2016)
+- [21cab20](../../commit/21cab20) [changed] dropdown props are passed through to the dropdown Button
+- [f9ea411](../../commit/f9ea411) [changed] navbar `navExpanded` to `expanded`
+- [0be007f](../../commit/0be007f) [removed] Nav `right` prop in favor of `pullRight`
+- [5dbafd3](../../commit/5dbafd3) [changed] Split the Navbar component into sub-components
+- [59c9571](../../commit/59c9571) [changed] remove extra wrapping `<nav>` element in Nav components
+- [229cb2c](../../commit/229cb2c) [fixed] aria-label properly passed to the Modal header button
+- [345f4b4](../../commit/345f4b4) [changed] Only add the `navigation` role to navbar when not using a <nav>
+- [44b3b9e](../../commit/44b3b9e) [fixed] when overlay animation is false the transition prop passed to base overlay should be null so that it does not trigger a React PropTypes warning
+- [0f3ee3e](../../commit/0f3ee3e) [removed] bootstrap mixin
+- [df2f1a3](../../commit/df2f1a3) [fixed] Don't clone children in ResponsiveEmbed
 
-### React
-* React package and browser build no longer "secretly" includes React DOM. ([@sebmarkbage](https://github.com/sebmarkbage) in [#7164](https://github.com/facebook/react/pull/7164) and [#7168](https://github.com/facebook/react/pull/7168))
-* Required PropTypes now fail with specific messages for null and undefined. ([@chenglou](https://github.com/chenglou) in [#7291](https://github.com/facebook/react/pull/7291))
-* Improved development performance by freezing children instead of copying. ([@keyanzhang](https://github.com/keyanzhang) in [#7455](https://github.com/facebook/react/pull/7455))
 
-### React DOM
-* Fixed occasional test failures when React DOM is used together with shallow renderer. ([@goatslacker](https://github.com/goatslacker) in [#8097](https://github.com/facebook/react/pull/8097))
-* Added a warning for invalid `aria-` attributes. ([@jessebeach](https://github.com/jessebeach) in [#7744](https://github.com/facebook/react/pull/7744))
-* Added a warning for using `autofocus` rather than `autoFocus`. ([@hkal](https://github.com/hkal) in [#7694](https://github.com/facebook/react/pull/7694))
-* Removed an unnecessary warning about polyfilling `String.prototype.split`. ([@nhunzaker](https://github.com/nhunzaker) in [#7629](https://github.com/facebook/react/pull/7629))
-* Clarified the warning about not calling PropTypes manually. ([@jedwards1211](https://github.com/jedwards1211) in [#7777](https://github.com/facebook/react/pull/7777))
-* The unstable `batchedUpdates` API now passes the wrapped function's return value through. ([@bgnorlov](https://github.com/bgnorlov) in [#7444](https://github.com/facebook/react/pull/7444))
-* Fixed a bug with updating text in IE 8. ([@mnpenner](https://github.com/mnpenner) in [#7832](https://github.com/facebook/react/pull/7832))
 
-### React Perf
-* When ReactPerf is started, you can now view the relative time spent in components as a chart in Chrome Timeline. ([@gaearon](https://github.com/gaearon) in [#7549](https://github.com/facebook/react/pull/7549))
+v0.27.3 - Mon, 26 Oct 2015 13:59:37 GMT
+---------------------------------------
 
-### React Test Utils
-* If you call `Simulate.click()` on a `<input disabled onClick={foo} />` then `foo` will get called whereas it didn't before. ([@nhunzaker](https://github.com/nhunzaker) in [#7642](https://github.com/facebook/react/pull/7642))
+- [9d5df37](../../commit/9d5df37) [fixed] OverlayTrigger show/hide timeout management
+- [6e37b27](../../commit/6e37b27) [fixed] Remove cross import between Button & ButtonInput
+- [6bad1e8](../../commit/6bad1e8) [fixed] Explicitly disallow justified Navbar Navs
 
-### React Test Renderer
-* Due to packaging changes, it no longer crashes when imported together with React DOM in the same file. ([@sebmarkbage](https://github.com/sebmarkbage) in [#7164](https://github.com/facebook/react/pull/7164) and [#7168](https://github.com/facebook/react/pull/7168))
-* `ReactTestRenderer.create()` now accepts `{createNodeMock: element => mock}` as an optional argument so you can mock refs with snapshot testing. ([@Aweary](https://github.com/Aweary) in [#7649](https://github.com/facebook/react/pull/7649), [#8261](https://github.com/facebook/react/pull/8261))
 
 
-## 15.3.2 (September 19, 2016)
+v0.27.2 - Sun, 18 Oct 2015 02:21:06 GMT
+---------------------------------------
 
-### React
-- Remove plain object warning from React.createElement & React.cloneElement. ([@spudly](https://github.com/spudly) in [#7724](https://github.com/facebook/react/pull/7724))
+- [e333c3d](../../commit/e333c3d) [fixed] Falsy href handling on MenuItem
+- [4f4017e](../../commit/4f4017e) [fixed] DropdownTitle children v. title
+- [8612b91](../../commit/8612b91) [fixed] Respect onClick on MenuItem
+- [b64ed11](../../commit/b64ed11) [fixed] Put onClick on correct element on NavItem
+- [9e4c041](../../commit/9e4c041) [fixed] Incorrect 'aria-selected' on NavItem
+- [0b0ac36](../../commit/0b0ac36) [added] Custom labels for Pagination's special element (ellipsis, first, last, prev & next)
 
-### React DOM
-- Add `playsInline` to supported HTML attributes. ([@reaperhulk](https://github.com/reaperhulk) in [#7519](https://github.com/facebook/react/pull/7519))
-- Add `as` to supported HTML attributes. ([@kevinslin](https://github.com/kevinslin) in [#7582](https://github.com/facebook/react/pull/7582))
-- Improve DOM nesting validation warning about whitespace. ([@sophiebits](https://github.com/sophiebits) in [#7515](https://github.com/facebook/react/pull/7515))
-- Avoid "Member not found" exception in IE10 when calling `preventDefault()` in Synthetic Events. ([@g-palmer](https://github.com/g-palmer) in [#7411](https://github.com/facebook/react/pull/7411))
-- Fix memory leak in `onSelect` implementation. ([@AgtLucas](https://github.com/AgtLucas) in [#7533](https://github.com/facebook/react/pull/7533))
-- Improve robustness of `document.documentMode` checks to handle Google Tag Manager. ([@SchleyB](https://github.com/SchleyB) in [#7594](https://github.com/facebook/react/pull/7594))
-- Add more cases to controlled inputs warning. ([@marcin-mazurek](https://github.com/marcin-mazurek) in [#7544](https://github.com/facebook/react/pull/7544))
-- Handle case of popup blockers overriding `document.createEvent`. ([@Andarist](https://github.com/Andarist) in [#7621](https://github.com/facebook/react/pull/7621))
-- Fix issue with `dangerouslySetInnerHTML` and SVG in Internet Explorer. ([@zpao](https://github.com/zpao) in [#7618](https://github.com/facebook/react/pull/7618))
-- Improve handling of Japanese IME on Internet Explorer. ([@msmania](https://github.com/msmania) in [#7107](https://github.com/facebook/react/pull/7107))
 
-### React Test Renderer
-- Support error boundaries. ([@millermedeiros](https://github.com/millermedeiros) in [#7558](https://github.com/facebook/react/pull/7558), [#7569](https://github.com/facebook/react/pull/7569), [#7619](https://github.com/facebook/react/pull/7619))
-- Skip null ref warning. ([@Aweary](https://github.com/Aweary) in [#7658](https://github.com/facebook/react/pull/7658))
 
-### React Perf Add-on
-- Ensure lifecycle timers are stopped on errors. ([@gaearon](https://github.com/gaearon) in [#7548](https://github.com/facebook/react/pull/7548))
+v0.27.1 - Thu, 08 Oct 2015 17:48:24 GMT
+---------------------------------------
 
+- [e64230c](../../commit/e64230c) [fixed] Don't include react-dom in the bundles
 
-## 15.3.1 (August 19, 2016)
 
-### React
-
-- Improve performance of development builds in various ways. ([@gaearon](https://github.com/gaearon) in [#7461](https://github.com/facebook/react/pull/7461), [#7463](https://github.com/facebook/react/pull/7463), [#7483](https://github.com/facebook/react/pull/7483), [#7488](https://github.com/facebook/react/pull/7488), [#7491](https://github.com/facebook/react/pull/7491), [#7510](https://github.com/facebook/react/pull/7510))
-- Cleanup internal hooks to improve performance of development builds. ([@gaearon](https://github.com/gaearon) in [#7464](https://github.com/facebook/react/pull/7464), [#7472](https://github.com/facebook/react/pull/7472), [#7481](https://github.com/facebook/react/pull/7481), [#7496](https://github.com/facebook/react/pull/7496))
-- Upgrade fbjs to pick up another performance improvement from [@gaearon](https://github.com/gaearon) for development builds. ([@zpao](https://github.com/zpao) in [#7532](https://github.com/facebook/react/pull/7532))
-- Improve startup time of React in Node. ([@zertosh](https://github.com/zertosh) in [#7493](https://github.com/facebook/react/pull/7493))
-- Improve error message of `React.Children.only`. ([@sophiebits](https://github.com/sophiebits) in [#7514](https://github.com/facebook/react/pull/7514))
-
-### React DOM
-- Avoid `<input>` validation warning from browsers when changing `type`. ([@nhunzaker](https://github.com/nhunzaker) in [#7333](https://github.com/facebook/react/pull/7333))
-- Avoid "Member not found" exception in IE10 when calling `stopPropagation()` in Synthetic Events. ([@nhunzaker](https://github.com/nhunzaker) in [#7343](https://github.com/facebook/react/pull/7343))
-- Fix issue resulting in inability to update some `<input>` elements in mobile browsers. ([@keyanzhang](https://github.com/keyanzhang) in [#7397](https://github.com/facebook/react/pull/7397))
-- Fix memory leak in server rendering. ([@keyanzhang](https://github.com/keyanzhang) in [#7410](https://github.com/facebook/react/pull/7410))
-- Fix issue resulting in `<input type="range">` values not updating when changing `min` or `max`. ([@troydemonbreun](https://github.com/troydemonbreun) in [#7486](https://github.com/facebook/react/pull/7486))
-- Add new warning for rare case of attempting to unmount a container owned by a different copy of React. ([@ventuno](https://github.com/ventuno) in [#7456](https://github.com/facebook/react/pull/7456))
-
-### React Test Renderer
-- Fix ReactTestInstance::toJSON() with empty top-level components. ([@Morhaus](https://github.com/Morhaus) in [#7523](https://github.com/facebook/react/pull/7523))
-
-### React Native Renderer
-- Change `trackedTouchCount` invariant into a console.error for better reliability. ([@yungsters](https://github.com/yungsters) in [#7400](https://github.com/facebook/react/pull/7400))
-
-
-## 15.3.0 (July 29, 2016)
-
-### React
-- Add `React.PureComponent` - a new base class to extend, replacing `react-addons-pure-render-mixin` now that mixins don't work with ES2015 classes. ([@sophiebits](https://github.com/sophiebits) in [#7195](https://github.com/facebook/react/pull/7195))
-- Add new warning when modifying `this.props.children`. ([@jimfb](https://github.com/jimfb) in [#7001](https://github.com/facebook/react/pull/7001))
-- Fixed issue with ref resolution order. ([@gaearon](https://github.com/gaearon) in [#7101](https://github.com/facebook/react/pull/7101))
-- Warn when mixin is undefined. ([@swaroopsm](https://github.com/swaroopsm) in [#6158](https://github.com/facebook/react/pull/6158))
-- Downgrade "unexpected batch number" invariant to a warning. ([@sophiebits](https://github.com/sophiebits) in [#7133](https://github.com/facebook/react/pull/7133))
-- Validate arguments to `oneOf` and `oneOfType` PropTypes sooner. ([@troydemonbreun](https://github.com/troydemonbreun) in [#6316](https://github.com/facebook/react/pull/6316))
-- Warn when calling PropTypes directly. ([@Aweary](https://github.com/Aweary) in [#7132](https://github.com/facebook/react/pull/7132), [#7194](https://github.com/facebook/react/pull/7194))
-- Improve warning when using Maps as children. ([@keyanzhang](https://github.com/keyanzhang) in [#7260](https://github.com/facebook/react/pull/7260))
-- Add additional type information to the `PropTypes.element` warning. ([@alexzherdev](https://github.com/alexzherdev) in [#7319](https://github.com/facebook/react/pull/7319))
-- Improve component identification in no-op `setState` warning. ([@keyanzhang](https://github.com/keyanzhang) in [#7326](https://github.com/facebook/react/pull/7326))
-
-### React DOM
-- Fix issue with nested server rendering. ([@Aweary](https://github.com/Aweary) in [#7033](https://github.com/facebook/react/pull/7033))
-- Add `xmlns`, `xmlnsXlink` to supported SVG attributes. ([@salzhrani](https://github.com/salzhrani) in [#6471](https://github.com/facebook/react/pull/6471))
-- Add `referrerPolicy` to supported HTML attributes. ([@Aweary](https://github.com/Aweary) in [#7274](https://github.com/facebook/react/pull/7274))
-- Fix issue resulting in `<input type="range">` initial value being rounded. ([@troydemonbreun](https://github.com/troydemonbreun) in [#7251](https://github.com/facebook/react/pull/7251))
-
-### React Test Renderer
-- Initial public release of package allowing more focused testing. Install with `npm install react-test-renderer`. ([@sophiebits](https://github.com/sophiebits) in [#6944](https://github.com/facebook/react/pull/6944), [#7258](https://github.com/facebook/react/pull/7258), [@iamdustan](https://github.com/iamdustan) in [#7362](https://github.com/facebook/react/pull/7362))
-
-### React Perf Add-on
-- Fix issue resulting in excessive warnings when encountering an internal measurement error. ([@sassanh](https://github.com/sassanh) in [#7299](https://github.com/facebook/react/pull/7299))
-
-### React TestUtils Add-on
-- Implement `type` property on for events created via `TestUtils.Simulate.*`. ([@yaycmyk](https://github.com/yaycmyk) in [#6154](https://github.com/facebook/react/pull/6154))
-- Fix crash when running TestUtils with the production build of React. ([@gaearon](https://github.com/gaearon) in [#7246](https://github.com/facebook/react/pull/7246))
-
-
-## 15.2.1 (July 8, 2016)
-
-### React
-- Fix errant warning about missing React element. ([@gaearon](https://github.com/gaearon) in [#7193](https://github.com/facebook/react/pull/7193))
-- Better removal of dev-only code, leading to a small reduction in the minified production bundle size. ([@gaearon](https://github.com/gaearon) in [#7188](https://github.com/facebook/react/pull/7188), [#7189](https://github.com/facebook/react/pull/7189))
-
-### React DOM
-- Add stack trace to null input value warning. ([@jimfb](https://github.com/jimfb) in [#7040](https://github.com/facebook/react/pull/7040))
-- Fix webcomponents example. ([@jalexanderfox](https://github.com/jalexanderfox) in [#7057](https://github.com/facebook/react/pull/7057))
-- Fix `unstable_renderSubtreeIntoContainer` so that context properly updates when linked to state. ([@gaearon](https://github.com/gaearon) in [#7125](https://github.com/facebook/react/pull/7125))
-- Improve invariant wording for void elements. ([@starkch](https://github.com/starkch) in [#7066](https://github.com/facebook/react/pull/7066))
-- Ensure no errors are thrown due to event handlers in server rendering. ([@rricard](https://github.com/rricard) in [#7127](https://github.com/facebook/react/pull/7127))
-- Fix regression resulting in `value`-less submit and reset inputs removing the browser-default text. ([@zpao](https://github.com/zpao) in [#7197](https://github.com/facebook/react/pull/7197))
-- Fix regression resulting in empty `name` attribute being added to inputs when not provided. ([@okonet](https://github.com/okonet) in [#7199](https://github.com/facebook/react/pull/7199))
-- Fix issue with nested server rendering. ([@Aweary](https://github.com/Aweary) in [#7033](https://github.com/facebook/react/pull/7033))
-
-### React Perf Add-on
-- Make `ReactPerf.start()` work properly during lifecycle methods. ([@gaearon](https://github.com/gaearon) in [#7208](https://github.com/facebook/react/pull/7208)).
-
-### React CSSTransitionGroup Add-on
-- Fix issue resulting in spurious unknown property warnings. ([@batusai513](https://github.com/batusai513) in [#7165](https://github.com/facebook/react/pull/7165))
 
-### React Native Renderer
-- Improve error handling in cross-platform touch event handling. ([@yungsters](https://github.com/yungsters) in [#7143](https://github.com/facebook/react/pull/7143))
+v0.27.0 - Wed, 07 Oct 2015 21:49:21 GMT
+---------------------------------------
 
+- [583febb](../../commit/583febb) [removed] unnecessary functionality in React v0.14
+- [049e538](../../commit/049e538) [changed] Update for React v0.14
 
-## 15.2.0 (July 1, 2016)
 
-### React
-- Add error codes to production invariants, with links to the view the full error text. ([@keyanzhang](https://github.com/keyanzhang) in [#6948](https://github.com/facebook/react/pull/6948))
-- Include component stack information in PropType validation warnings. ([@troydemonbreun](https://github.com/troydemonbreun) in [#6398](https://github.com/facebook/react/pull/6398), [@sophiebits](https://github.com/sophiebits) in [#6771](https://github.com/facebook/react/pull/6771))
-- Include component stack information in key warnings. ([@keyanzhang](https://github.com/keyanzhang) in [#6799](https://github.com/facebook/react/pull/6799))
-- Stop validating props at mount time, only validate at element creation. ([@keyanzhang](https://github.com/keyanzhang) in [#6824](https://github.com/facebook/react/pull/6824))
-- New invariant providing actionable error in missing instance case. ([@yungsters](https://github.com/yungsters) in [#6990](https://github.com/facebook/react/pull/6990))
-- Add `React.PropTypes.symbol` to support ES2015 Symbols as props. ([@puradox](https://github.com/puradox) in [#6377](https://github.com/facebook/react/pull/6377))
-- Fix incorrect coercion of ref or key that are undefined in development ([@gaearon](https://github.com/gaearon) in [#6880](https://github.com/facebook/react/pull/6880))
-- Fix a false positive when passing other element’s props to cloneElement ([@ericmatthys](https://github.com/ericmatthys) in [#6268](https://github.com/facebook/react/pull/6268))
-- Warn if you attempt to define `childContextTypes` on a functional component ([@Aweary](https://github.com/Aweary) in [#6933](https://github.com/facebook/react/pull/6933))
 
-### React DOM
-- Add warning for unknown properties on DOM elements. ([@jimfb](https://github.com/jimfb) in [#6800](https://github.com/facebook/react/pull/6800), [@gm758](https://github.com/gm758) in [#7152](https://github.com/facebook/react/pull/7152))
-- Properly remove attributes from custom elements. ([@grassator](https://github.com/grassator) in [#6748](https://github.com/facebook/react/pull/6748))
-- Fix invalid unicode escape in attribute name regular expression. ([@nbjahan](https://github.com/nbjahan) in [#6772](https://github.com/facebook/react/pull/6772))
-- Add `onLoad` handling to `<link>` element. ([@roderickhsiao](https://github.com/roderickhsiao) in [#6815](https://github.com/facebook/react/pull/6815))
-- Add `onError` handling to `<source>` element. ([@wadahiro](https://github.com/wadahiro) in [#6941](https://github.com/facebook/react/pull/6941))
-- Handle `value` and `defaultValue` more accurately in the DOM. ([@jimfb](https://github.com/jimfb) in [#6406](https://github.com/facebook/react/pull/6406))
-- Fix events issue in environments with mutated `Object.prototype`. ([@Weizenlol](https://github.com/Weizenlol) in [#6886](https://github.com/facebook/react/pull/6886))
-- Fix issue where `is="null"` ended up in the DOM in Firefox. ([@darobin](https://github.com/darobin) in [#6896](https://github.com/facebook/react/pull/6896))
-- Improved performance of text escaping by using [escape-html](https://github.com/component/escape-html). ([@aickin](https://github.com/aickin) in [#6862](https://github.com/facebook/react/pull/6862))
-- Fix issue with `dangerouslySetInnerHTML` and SVG in Internet Explorer. ([@joshhunt](https://github.com/joshhunt) in [#6982](https://github.com/facebook/react/pull/6982))
-- Fix issue with `<textarea>` placeholders. ([@jimfb](https://github.com/jimfb) in [#7002](https://github.com/facebook/react/pull/7002))
-- Fix controlled vs uncontrolled detection of `<input type="radio"/>`. ([@jimfb](https://github.com/jimfb) in [#7003](https://github.com/facebook/react/pull/7003))
-- Improve performance of updating text content. ([@trueadm](https://github.com/trueadm) in [#7005](https://github.com/facebook/react/pull/7005))
-- Ensure controlled `<select>` components behave the same on initial render as they do on updates. ([@yiminghe](https://github.com/yiminghe) in [#5362](https://github.com/facebook/react/pull/5362))
+v0.26.2 - Wed, 07 Oct 2015 16:43:16 GMT
+---------------------------------------
 
-### React Perf Add-on
-- Add `isRunning()` API. ([@nfcampos](https://github.com/nfcampos) in [#6763](https://github.com/facebook/react/pull/6763))
-- Improve accuracy of lifecycle hook timing. ([@gaearon](https://github.com/gaearon) in [#6858](https://github.com/facebook/react/pull/6858))
-- Fix internal errors when using ReactPerf with portal components. ([@gaearon](https://github.com/gaearon) in [#6860](https://github.com/facebook/react/pull/6860))
-- Fix performance regression. ([@sophiebits](https://github.com/sophiebits) in [#6770](https://github.com/facebook/react/pull/6770))
-- Add warning that ReactPerf is not enabled in production. ([@sashashakun](https://github.com/sashashakun) in [#6884](https://github.com/facebook/react/pull/6884))
+- [ca52c30](../../commit/ca52c30) [fixed] Actually export the Image component
+- [73daba7](../../commit/73daba7) [fixed] Show toggle button when using NavBrand
 
-### React CSSTransitionGroup Add-on
-- Fix timing issue with `null` node. ([@keyanzhang](https://github.com/keyanzhang) in [#6958](https://github.com/facebook/react/pull/6958))
 
-### React Native Renderer
-- Dependencies on React Native modules use CommonJS requires instead of providesModule. ([@davidaurelio](https://github.com/davidaurelio) in [#6715](https://github.com/facebook/react/pull/6715))
 
+v0.26.1 - Mon, 05 Oct 2015 02:04:27 GMT
+---------------------------------------
 
-## 15.1.0 (May 20, 2016)
 
-### React
-- Ensure we're using the latest `object-assign`, which has protection against a non-spec-compliant native `Object.assign`. ([@zpao](https://github.com/zpao) in [#6681](https://github.com/facebook/react/pull/6681))
-- Add a new warning to communicate that `props` objects passed to `createElement` must be plain objects. ([@richardscarrott](https://github.com/richardscarrott) in [#6134](https://github.com/facebook/react/pull/6134))
-- Fix a batching bug resulting in some lifecycle methods incorrectly being called multiple times. ([@sophiebits](https://github.com/sophiebits) in [#6650](https://github.com/facebook/react/pull/6650))
 
-### React DOM
-- Fix regression in custom elements support. ([@jscissr](https://github.com/jscissr) in [#6570](https://github.com/facebook/react/pull/6570))
-- Stop incorrectly warning about using `onScroll` event handler with server rendering. ([@Aweary](https://github.com/Aweary) in [#6678](https://github.com/facebook/react/pull/6678))
-- Fix grammar in the controlled input warning. ([@jakeboone02](https://github.com/jakeboone02) in [#6657](https://github.com/facebook/react/pull/6657))
-- Fix issue preventing `<object>` nodes from being able to read `<param>` nodes in IE. ([@syranide](https://github.com/syranide) in [#6691](https://github.com/facebook/react/pull/6691))
-- Fix issue resulting in crash when using experimental error boundaries with server rendering. ([@jimfb](https://github.com/jimfb) in [#6694](https://github.com/facebook/react/pull/6694))
-- Add additional information to the controlled input warning. ([@borisyankov](https://github.com/borisyankov) in [#6341](https://github.com/facebook/react/pull/6341))
 
-### React Perf Add-on
-- Completely rewritten to collect data more accurately and to be easier to maintain. ([@gaearon](https://github.com/gaearon) in [#6647](https://github.com/facebook/react/pull/6647), [#6046](https://github.com/facebook/react/pull/6046))
 
-### React Native Renderer
-- Remove some special cases for platform specific branching. ([@sebmarkbage](https://github.com/sebmarkbage) in [#6660](https://github.com/facebook/react/pull/6660))
-- Remove use of `merge` utility. ([@sebmarkbage](https://github.com/sebmarkbage) in [#6634](https://github.com/facebook/react/pull/6634))
-- Renamed some modules to better indicate usage ([@javache](https://github.com/javache) in [#6643](https://github.com/facebook/react/pull/6643))
-
-
-## 15.0.2 (April 29, 2016)
-
-### React
-- Removed extraneous files from npm package. ([@gaearon](https://github.com/gaearon) in [#6388](https://github.com/facebook/react/pull/6388))
-- Ensure `componentWillUnmount` is only called once. ([@jimfb](https://github.com/jimfb) in [#6613](https://github.com/facebook/react/pull/6613))
-
-### ReactDOM
-- Fixed bug resulting in disabled buttons responding to mouse events in IE. ([@nhunzaker](https://github.com/nhunzaker) in [#6215](https://github.com/facebook/react/pull/6215))
-- Ensure `<option>`s are correctly selected when inside `<optgroup>`. ([@trevorsmith](https://github.com/trevorsmith) in [#6442](https://github.com/facebook/react/pull/6442))
-- Restore support for rendering into a shadow root. ([@Wildhoney](https://github.com/Wildhoney) in [#6462](https://github.com/facebook/react/pull/6462))
-- Ensure nested `<body>` elements are caught when warning for invalid markup. ([@keyanzhang](https://github.com/keyanzhang) in [#6469](https://github.com/facebook/react/pull/6469))
-- Improve warning when encountering multiple elements with the same key. ([@hkal](https://github.com/hkal) in [#6500](https://github.com/facebook/react/pull/6500))
-
-### React TestUtils Add-on
-- Ensure that functional components do not have an owner. ([@gaearon](https://github.com/gaearon) in [#6362](https://github.com/facebook/react/pull/6362))
-- Handle invalid arguments to `scryRenderedDOMComponentsWithClass` better. ([@ipeters90](https://github.com/ipeters90) in [#6529](https://github.com/facebook/react/pull/6529))
-
-### React Perf Add-on
-- Ignore DOM operations that occur outside the batch operation. ([@gaearon](https://github.com/gaearon) in [#6516](https://github.com/facebook/react/pull/6516))
-
-### React Native Renderer
-- These files are now shipped inside the React npm package. They have no impact on React core or ReactDOM.
-
-
-## 15.0.1 (April 8, 2016)
-
-### React
-- Restore `React.__spread` API to unbreak code compiled with some tools making use of this undocumented API. It is now officially deprecated. ([@zpao](https://github.com/zpao) in [#6444](https://github.com/facebook/react/pull/6444))
+v0.26.0 - Sun, 04 Oct 2015 21:21:22 GMT
+---------------------------------------
 
-### ReactDOM
-- Fixed issue resulting in loss of cursor position in controlled inputs. ([@sophiebits](https://github.com/sophiebits) in [#6449](https://github.com/facebook/react/pull/6449))
+- [b7853bb](../../commit/b7853bb) [fixed] Dropdown focus behavior on click
+- [dbb0385](../../commit/dbb0385) [added] #1320 allow NavItem class to be set
+- [3d13dda](../../commit/3d13dda) [fixed] #1287 ListGroupItem with onClick and header properly displays header
+- [3f5c6e3](../../commit/3f5c6e3) [added] #1181 ListGroup supports componentClass prop
+- [b5a9f3a](../../commit/b5a9f3a)     [added] NavBrand Component
+- [ac37698](../../commit/ac37698) [added] 'Responsive embed' component
+- [1c2d054](../../commit/1c2d054) [fixed] Set the disabled css class so that the text is greyed out.
+- [0348274](../../commit/0348274) [fixed] Breadcrumb and BreadcrumbItem components
+- [3c710f9](../../commit/3c710f9) [added] Breadcrumb component
+- [99d333f](../../commit/99d333f) [changed] use `lodash-compat` for IE8 compatibility and `lodash` for dev
+- [ce564cb](../../commit/ce564cb) [fixed] any props not known by DropdownMenu are passed through to the underlying ul
+- [674d67e](../../commit/674d67e) [added] images component
+- [deee09d](../../commit/deee09d) [fixed] stop rendering extra attributes on Progress bar dom nodes
+- [02f1fec](../../commit/02f1fec) [fixed] allow null activeKey (empty) selection
+- [656f40d](../../commit/656f40d) [changed] 'id' prop-type made uniform throughout the project
+- [b9a4477](../../commit/b9a4477) [changed] use 'react-prop-types' instead of 'utils/CustomPropTypes'
 
 
-## 15.0.0 (April 7, 2016)
 
-### Major changes
+v0.25.2 - Sat, 12 Sep 2015 15:59:13 GMT
+---------------------------------------
 
-- **Initial render now uses `document.createElement` instead of generating HTML.** Previously we would generate a large string of HTML and then set `node.innerHTML`. At the time, this was decided to be faster than using `document.createElement` for the majority of cases and browsers that we supported. Browsers have continued to improve and so overwhelmingly this is no longer true. By using `createElement` we can make other parts of React faster. ([@sophiebits](https://github.com/sophiebits) in [#5205](https://github.com/facebook/react/pull/5205))
-- **`data-reactid` is no longer on every node.** As a result of using `document.createElement`, we can prime the node cache as we create DOM nodes, allowing us to skip a potential lookup (which used the `data-reactid` attribute). Root nodes will have a `data-reactroot` attribute and server generated markup will still contain `data-reactid`. ([@sophiebits](https://github.com/sophiebits) in [#5205](https://github.com/facebook/react/pull/5205))
-- **No more extra `<span>`s.** ReactDOM will now render plain text nodes interspersed with comment nodes that are used for demarcation. This gives us the same ability to update individual pieces of text, without creating extra nested nodes. If you were targeting these `<span>`s in your CSS, you will need to adjust accordingly. You can always render them explicitly in your components. ([@mwiencek](https://github.com/mwiencek) in [#5753](https://github.com/facebook/react/pull/5753))
-- **Rendering `null` now uses comment nodes.** Previously `null` would render to `<noscript>` elements. We now use comment nodes. This may cause issues if making use of `:nth-child` CSS selectors. While we consider this rendering behavior an implementation detail of React, it's worth noting the potential problem. ([@sophiebits](https://github.com/sophiebits) in [#5451](https://github.com/facebook/react/pull/5451))
-- **Functional components can now return `null`.** We added support for [defining stateless components as functions](/react/blog/2015/09/10/react-v0.14-rc1.html#stateless-function-components) in React 0.14. However, React 0.14 still allowed you to define a class component without extending `React.Component` or using `React.createClass()`, so [we couldn’t reliably tell if your component is a function or a class](https://github.com/facebook/react/issues/5355), and did not allow returning `null` from it. This issue is solved in React 15, and you can now return `null` from any component, whether it is a class or a function. ([@jimfb](https://github.com/jimfb) in [#5884](https://github.com/facebook/react/pull/5884))
-- **Improved SVG support.** All SVG tags are now fully supported. (Uncommon SVG tags are not present on the `React.DOM` element helper, but JSX and `React.createElement` work on all tag names.) All SVG attributes that are implemented by the browsers should be supported too. If you find any attributes that we have missed, please [let us know in this issue](https://github.com/facebook/react/issues/1657). ([@zpao](https://github.com/zpao) in [#6243](https://github.com/facebook/react/pull/6243))
+- [f2c3b68](../../commit/f2c3b68) [changed] tab keyboard navigation to be more inline with ARIA spec
+- [0c27403](../../commit/0c27403) [fixed] Don't render Grid or Row with Tabs
+- [b847dec](../../commit/b847dec) [added] active prop on MenuItem (again)
+- [3a369cc](../../commit/3a369cc) [fixed] Error on opening dropdown without focusable items
+- [bad277e](../../commit/bad277e) [changed] Use PropTypes.node for validation and fix/add tests
+- [533530a](../../commit/533530a) [added] Adds a callout to the sr-only button in `Closable Alerts`
+- [1f29000](../../commit/1f29000) [fixed] screen-reader accessible dismiss button on alerts
+- [c8a59c6](../../commit/c8a59c6) [fixed] OverlayTrigger hover triggers on mousenter/leave
+- [9c69271](../../commit/9c69271) [fixed] OverlayTrigger event handlers are properly maintained
+- [da1d0bc](../../commit/da1d0bc) [fixed] focus returns to the toggle by default onClose
 
-### Breaking changes
 
-- **No more extra `<span>`s.**
-- **`React.cloneElement()` now resolves `defaultProps`.** We fixed a bug in `React.cloneElement()` that some components may rely on. If some of the `props` received by `cloneElement()` are `undefined`, it used to return an element with `undefined` values for those props. We’re changing it to be consistent with `createElement()`. Now any `undefined` props passed to `cloneElement()` are resolved to the corresponding component’s `defaultProps`. ([@truongduy134](https://github.com/truongduy134) in [#5997](https://github.com/facebook/react/pull/5997))
-- **`ReactPerf.getLastMeasurements()` is opaque.** This change won’t affect applications but may break some third-party tools. We are [revamping `ReactPerf` implementation](https://github.com/facebook/react/pull/6046) and plan to release it during the 15.x cycle. The internal performance measurement format is subject to change so, for the time being, we consider the return value of `ReactPerf.getLastMeasurements()` an opaque data structure that should not be relied upon. ([@gaearon](https://github.com/gaearon) in [#6286](https://github.com/facebook/react/pull/6286))
 
-#### Removed deprecations
+v0.25.1 - Fri, 28 Aug 2015 18:30:59 GMT
+---------------------------------------
 
-These deprecations were introduced nine months ago in v0.14 with a warning and are removed:
+- [478300a](../../commit/478300a) [fixed] Handle falsey DropdownMenu  children correctly
+- [c450e96](../../commit/c450e96) [fixed] stop rendering extra attributes on Progress bar dom nodes
+- [3ceb7af](../../commit/3ceb7af) [fixed] allow null activeKey (empty) selection
+- [a7f93ae](../../commit/a7f93ae) [fixed] title is not passed to tab pane DOM node
+- [1bee466](../../commit/1bee466) [changed] 'id' prop-type made uniform throughout the project
+- [e438250](../../commit/e438250) [fixed] 'isRequireForA11y' undefined/null checking
+- [664b465](../../commit/664b465) [fixed] id passthrough for MenuItem
 
-- Deprecated APIs are removed from the `React` top-level export: `findDOMNode`, `render`, `renderToString`, `renderToStaticMarkup`, and `unmountComponentAtNode`. As a reminder, they are now available on `ReactDOM` and `ReactDOMServer`. ([@jimfb](https://github.com/jimfb) in [#5832](https://github.com/facebook/react/pull/5832))
-- Deprecated addons are removed: `batchedUpdates` and `cloneWithProps`. ([@jimfb](https://github.com/jimfb) in [#5859](https://github.com/facebook/react/pull/5859), [@zpao](https://github.com/zpao) in [#6016](https://github.com/facebook/react/pull/6016))
-- Deprecated component instance methods are removed: `setProps`, `replaceProps`, and `getDOMNode`. ([@jimfb](https://github.com/jimfb) in [#5570](https://github.com/facebook/react/pull/5570))
-- Deprecated CommonJS `react/addons` entry point is removed. As a reminder, you should use separate `react-addons-*` packages instead. This only applies if you use the CommonJS builds. ([@gaearon](https://github.com/gaearon) in [#6285](https://github.com/facebook/react/pull/6285))
-- Passing `children` to void elements like `<input>` was deprecated, and now throws an error. ([@jonhester](https://github.com/jonhester) in [#3372](https://github.com/facebook/react/pull/3372))
-- React-specific properties on DOM `refs` (e.g. `this.refs.div.props`) were deprecated, and are removed now. ([@jimfb](https://github.com/jimfb) in [#5495](https://github.com/facebook/react/pull/5495))
 
-### New deprecations, introduced with a warning
 
-Each of these changes will continue to work as before with a new warning until the release of React 16 so you can upgrade your code gradually.
+v0.25.0 - Tue, 25 Aug 2015 18:56:33 GMT
+---------------------------------------
 
-- `LinkedStateMixin` and `valueLink` are now deprecated due to very low popularity. If you need this, you can use a wrapper component that implements the same behavior: [react-linked-input](https://www.npmjs.com/package/react-linked-input). ([@jimfb](https://github.com/jimfb) in [#6127](https://github.com/facebook/react/pull/6127))
-- Future versions of React will treat `<input value={null}>` as a request to clear the input. However, React 0.14 has been ignoring `value={null}`. React 15 warns you on a `null` input value and offers you to clarify your intention. To fix the warning, you may explicitly pass an empty string to clear a controlled input, or pass `undefined` to make the input uncontrolled. ([@antoaravinth](https://github.com/antoaravinth) in [#5048](https://github.com/facebook/react/pull/5048))
-- `ReactPerf.printDOM()` was renamed to `ReactPerf.printOperations()`, and `ReactPerf.getMeasurementsSummaryMap()` was renamed to `ReactPerf.getWasted()`. ([@gaearon](https://github.com/gaearon) in [#6287](https://github.com/facebook/react/pull/6287))
+- [8776128](../../commit/8776128) [fixed] Affix in IE10 - scrollHeight #1073
+- [adad32e](../../commit/adad32e) [added] PropType validation for headerRole and panelRole
+- [346501e](../../commit/346501e) [changed] DropdownButton, SplitButton, DropdownMenu, MenuItem completely rewritten
+- [653d2ff](../../commit/653d2ff) [changed] deprecate domUtils as a public API
+- [769781d](../../commit/769781d) [added] accessibility props for PanelGroup and Panels.
+- [5f0ac64](../../commit/5f0ac64) [added] Implements a generalized left-aligned version of tabs
+- [628d586](../../commit/628d586) [changed] deprecated Position, Transition, Portal
+- [03a6a61](../../commit/03a6a61) [changed] deprecated the Transition duration prop
+- [459ab0c](../../commit/459ab0c) [added] #460 ListGroupItem outputs <button> when an onClick handler is set.
+- [e482ede](../../commit/e482ede) [fixed] wrong tabs switching animation for 'Tabs' component
+- [b62e1f5](../../commit/b62e1f5) [fixed] wrong tabs switching animation for 'TabbedArea' component
+- [d0ff625](../../commit/d0ff625) [added] aria role "tablist" to the Nav on Tabs
+- [e7cf455](../../commit/e7cf455) [changed] New Tabs API
+- [f6d32c4](../../commit/f6d32c4) [changed] deprecate 'utils/CustomPropTypes' exporting
+- [caff9a0](../../commit/caff9a0) [removed] Factory support
 
-### New helpful warnings
 
-- If you use a minified copy of the _development_ build, React DOM kindly encourages you to use the faster production build instead. ([@sophiebits](https://github.com/sophiebits) in [#5083](https://github.com/facebook/react/pull/5083))
-- React DOM: When specifying a unit-less CSS value as a string, a future version will not add `px` automatically. This version now warns in this case (ex: writing `style={{width: '300'}}`. Unitless *number* values like `width: 300` are unchanged. ([@pluma](https://github.com/pluma) in [#5140](https://github.com/facebook/react/pull/5140))
-- Synthetic Events will now warn when setting and accessing properties (which will not get cleared appropriately), as well as warn on access after an event has been returned to the pool. ([@kentcdodds](https://github.com/kentcdodds) in [#5940](https://github.com/facebook/react/pull/5940) and [@koba04](https://github.com/koba04) in [#5947](https://github.com/facebook/react/pull/5947))
-- Elements will now warn when attempting to read `ref` and `key` from the props. ([@prometheansacrifice](https://github.com/prometheansacrifice) in [#5744](https://github.com/facebook/react/pull/5744))
-- React will now warn if you pass a different `props` object to `super()` in the constructor. ([@prometheansacrifice](https://github.com/prometheansacrifice) in [#5346](https://github.com/facebook/react/pull/5346))
-- React will now warn if you call `setState()` inside `getChildContext()`. ([@raineroviir](https://github.com/raineroviir) in [#6121](https://github.com/facebook/react/pull/6121))
-- React DOM now attempts to warn for mistyped event handlers on DOM elements, such as `onclick` which should be `onClick`. ([@ali](https://github.com/ali) in [#5361](https://github.com/facebook/react/pull/5361))
-- React DOM now warns about `NaN` values in `style`. ([@jontewks](https://github.com/jontewks) in [#5811](https://github.com/facebook/react/pull/5811))
-- React DOM now warns if you specify both `value` and `defaultValue` for an input. ([@mgmcdermott](https://github.com/mgmcdermott) in [#5823](https://github.com/facebook/react/pull/5823))
-- React DOM now warns if an input switches between being controlled and uncontrolled. ([@TheBlasfem](https://github.com/TheBlasfem) in [#5864](https://github.com/facebook/react/pull/5864))
-- React DOM now warns if you specify `onFocusIn` or `onFocusOut` handlers as they are unnecessary in React. ([@jontewks](https://github.com/jontewks) in [#6296](https://github.com/facebook/react/pull/6296))
-- React now prints a descriptive error message when you pass an invalid callback as the last argument to `ReactDOM.render()`, `this.setState()`, or `this.forceUpdate()`. ([@conorhastings](https://github.com/conorhastings) in [#5193](https://github.com/facebook/react/pull/5193) and [@gaearon](https://github.com/gaearon) in [#6310](https://github.com/facebook/react/pull/6310))
-- Add-Ons: `TestUtils.Simulate()` now prints a helpful message if you attempt to use it with shallow rendering. ([@conorhastings](https://github.com/conorhastings) in [#5358](https://github.com/facebook/react/pull/5358))
-- PropTypes: `arrayOf()` and `objectOf()` provide better error messages for invalid arguments. ([@chicoxyzzy](https://github.com/chicoxyzzy) in [#5390](https://github.com/facebook/react/pull/5390))
 
-### Notable bug fixes
+v0.24.5 - Fri, 14 Aug 2015 18:02:13 GMT
+---------------------------------------
 
-- Fixed multiple small memory leaks. ([@sophiebits](https://github.com/sophiebits) in [#4983](https://github.com/facebook/react/pull/4983) and [@victor-homyakov](https://github.com/victor-homyakov) in [#6309](https://github.com/facebook/react/pull/6309))
-- Input events are handled more reliably in IE 10 and IE 11; spurious events no longer fire when using a placeholder. ([@jquense](https://github.com/jquense) in [#4051](https://github.com/facebook/react/pull/4051))
-- The `componentWillReceiveProps()` lifecycle method is now consistently called when `context` changes. ([@milesj](https://github.com/milesj) in [#5787](https://github.com/facebook/react/pull/5787))
-- `React.cloneElement()` doesn’t append slash to an existing `key` when used inside `React.Children.map()`. ([@ianobermiller](https://github.com/ianobermiller) in [#5892](https://github.com/facebook/react/pull/5892))
-- React DOM now supports the `cite` and `profile` HTML attributes. ([@AprilArcus](https://github.com/AprilArcus) in [#6094](https://github.com/facebook/react/pull/6094) and [@saiichihashimoto](https://github.com/saiichihashimoto) in [#6032](https://github.com/facebook/react/pull/6032))
-- React DOM now supports `cssFloat`, `gridRow` and `gridColumn` CSS properties. ([@stevenvachon](https://github.com/stevenvachon) in [#6133](https://github.com/facebook/react/pull/6133) and  [@mnordick](https://github.com/mnordick) in [#4779](https://github.com/facebook/react/pull/4779))
-- React DOM now correctly handles `borderImageOutset`, `borderImageWidth`, `borderImageSlice`, `floodOpacity`, `strokeDasharray`, and `strokeMiterlimit` as unitless CSS properties. ([@rofrischmann](https://github.com/rofrischmann) in [#6210](https://github.com/facebook/react/pull/6210) and [#6270](https://github.com/facebook/react/pull/6270))
-- React DOM now supports the `onAnimationStart`, `onAnimationEnd`, `onAnimationIteration`, `onTransitionEnd`, and `onInvalid` events. Support for `onLoad` has been added to `object` elements. ([@tomduncalf](https://github.com/tomduncalf) in [#5187](https://github.com/facebook/react/pull/5187),  [@milesj](https://github.com/milesj) in [#6005](https://github.com/facebook/react/pull/6005), and [@ara4n](https://github.com/ara4n) in [#5781](https://github.com/facebook/react/pull/5781))
-- React DOM now defaults to using DOM attributes instead of properties, which fixes a few edge case bugs. Additionally the nullification of values (ex: `href={null}`) now results in the forceful removal, no longer trying to set to the default value used by browsers in the absence of a value. ([@syranide](https://github.com/syranide) in [#1510](https://github.com/facebook/react/pull/1510))
-- React DOM does not mistakenly coerce `children` to strings for Web Components. ([@jimfb](https://github.com/jimfb) in [#5093](https://github.com/facebook/react/pull/5093))
-- React DOM now correctly normalizes SVG `<use>` events. ([@edmellum](https://github.com/edmellum) in [#5720](https://github.com/facebook/react/pull/5720))
-- React DOM does not throw if a `<select>` is unmounted while its `onChange` handler is executing. ([@sambev](https://github.com/sambev) in [#6028](https://github.com/facebook/react/pull/6028))
-- React DOM does not throw in Windows 8 apps. ([@Andrew8xx8](https://github.com/Andrew8xx8) in [#6063](https://github.com/facebook/react/pull/6063))
-- React DOM does not throw when asynchronously unmounting a child with a `ref`. ([@yiminghe](https://github.com/yiminghe) in [#6095](https://github.com/facebook/react/pull/6095))
-- React DOM no longer forces synchronous layout because of scroll position tracking. ([@syranide](https://github.com/syranide) in [#2271](https://github.com/facebook/react/pull/2271))
-- `Object.is` is used in a number of places to compare values, which leads to fewer false positives, especially involving `NaN`. In particular, this affects the `shallowCompare` add-on. ([@chicoxyzzy](https://github.com/chicoxyzzy) in [#6132](https://github.com/facebook/react/pull/6132))
-- Add-Ons: ReactPerf no longer instruments adding or removing an event listener because they don’t really touch the DOM due to event delegation. ([@antoaravinth](https://github.com/antoaravinth) in [#5209](https://github.com/facebook/react/pull/5209))
+- [dc2a07a](../../commit/dc2a07a) [fixed] Collapse exported as Fade
+- [f53bcf5](../../commit/f53bcf5) [fixed] 'bsSize' and 'bsStyle' properties has been removed from 'Glyphicon'
 
-### Other improvements
 
-- React now uses `loose-envify` instead of `envify` so it installs fewer transitive dependencies. ([@qerub](https://github.com/qerub) in [#6303](https://github.com/facebook/react/pull/6303))
-- Shallow renderer now exposes `getMountedInstance()`. ([@glenjamin](https://github.com/glenjamin) in [#4918](https://github.com/facebook/react/pull/4918))
-- Shallow renderer now returns the rendered output from `render()`. ([@simonewebdesign](https://github.com/simonewebdesign) in [#5411](https://github.com/facebook/react/pull/5411))
-- React no longer depends on ES5 *shams* for `Object.create` and `Object.freeze` in older environments. It still, however, requires ES5 *shims* in those environments. ([@dgreensp](https://github.com/dgreensp) in [#4959](https://github.com/facebook/react/pull/4959))
-- React DOM now allows `data-` attributes with names that start with numbers. ([@nLight](https://github.com/nLight) in [#5216](https://github.com/facebook/react/pull/5216))
-- React DOM adds a new `suppressContentEditableWarning` prop for components like [Draft.js](https://facebook.github.io/draft-js/) that intentionally manage `contentEditable` children with React. ([@mxstbr](https://github.com/mxstbr) in [#6112](https://github.com/facebook/react/pull/6112))
-- React improves the performance for `createClass()` on complex specs. ([@sophiebits](https://github.com/sophiebits) in [#5550](https://github.com/facebook/react/pull/5550))
 
+v0.24.4 - Mon, 10 Aug 2015 19:33:35 GMT
+---------------------------------------
 
-## 0.14.8 (March 29, 2016)
+- [b688014](../../commit/b688014) [added] custom feedback icons for Input
+- [83cdaa3](../../commit/83cdaa3) [added] formControlFeedback prop to Glyphicon
+- [2ecac68](../../commit/2ecac68) [fixed] Modal uses provided className again
+- [47bd7f6](../../commit/47bd7f6) [fixed] disabled pagination buttons should not fire 'onSelect'
+- [c60dc03](../../commit/c60dc03) [fixed] only add aria-expanded to Collapse when an ARIA role is present
 
-### React
-- Fixed memory leak when rendering on the server
 
-## 0.14.7 (January 28, 2016)
 
-### React
-- Fixed bug with `<option>` tags when using `dangerouslySetInnerHTML`
-- Fixed memory leak in synthetic event system
+v0.24.3 - Fri, 31 Jul 2015 18:09:54 GMT
+---------------------------------------
 
-### React TestUtils Add-on
-- Fixed bug with calling `setState` in `componentWillMount` when using shallow rendering
+- [02f8966](../../commit/02f8966) [changed] Update dependencies
+- [bae8ba9](../../commit/bae8ba9) [fixed] Carousel checks if it is mounted before setting state
+- [fd8d4d2](../../commit/fd8d4d2) [fixed] regression when clicking "static" modal backdrops
+- [0f46a97](../../commit/0f46a97) [added] Allow custom Modal dialog components
+- [a4ce7e1](../../commit/a4ce7e1) [fixed] added finalisation for the Modal when it was unbound from the tree
+- [d89d5f3](../../commit/d89d5f3) [fixed] Modal error when backdrop is `false`
+- [f410904](../../commit/f410904) [added] 'xs, sm, md, lg' values for 'bsSize'
+- [2558f32](../../commit/2558f32) [fixed] TabbedArea panes rendering with animation
+- [90aece6](../../commit/90aece6) [changed] Simplify 'styleMaps.STYLES' to be of Array type
+- [860d168](../../commit/860d168) [fixed] allow totally custom styles via 'bsStyle'
+- [74da76a](../../commit/74da76a) [fixed] Prevent click on PageItem if disabled
 
 
-## 0.14.6 (January 6, 2016)
 
-### React
-- Updated `fbjs` dependency to pick up change affecting handling of undefined document.
+v0.24.2 - Sat, 25 Jul 2015 00:47:07 GMT
+---------------------------------------
 
+- [4271eb3](../../commit/4271eb3) [fixed] add lodash as direct dependency
 
-## 0.14.5 (December 29, 2015)
 
-### React
-- More minor internal changes for better compatibility with React Native
 
+v0.24.1 - Fri, 24 Jul 2015 23:12:09 GMT
+---------------------------------------
 
-## 0.14.4 (December 29, 2015)
+- [e5155c6](../../commit/e5155c6) [fixed] ensure last focused item can be focused
+- [6a541ff](../../commit/6a541ff) [added] buttonComponentClass prop for Pagination
+- [29fe417](../../commit/29fe417) [fixed] overlay classNames are maintained by overlayTrigget
+- [d272389](../../commit/d272389) [added] Overlay and OverlayTrigger accept Transition callbacks
+- [596f40c](../../commit/596f40c) [fixed] Modal uses bsClass prop to set its classes
+- [86d3feb](../../commit/86d3feb) [fixed] added missed 'aria-label' prop type validation for 'ModalHeader'
+- [58eaab0](../../commit/58eaab0) [changed] pass transition callbacks to Modal Transition
+- [abccff9](../../commit/abccff9) [changed] expose static Modal Dialog component
+- [b5c1893](../../commit/b5c1893) [changed] unfix 'babel' back.
 
-### React
-- Minor internal changes for better compatibility with React Native
 
-### React DOM
-- The `autoCapitalize` and `autoCorrect` props are now set as attributes in the DOM instead of properties to improve cross-browser compatibility
-- Fixed bug with controlled `<select>` elements not handling updates properly
 
-### React Perf Add-on
-- Some DOM operation names have been updated for clarity in the output of `.printDOM()`
+v0.24.0 - Tue, 21 Jul 2015 22:13:05 GMT
+---------------------------------------
 
+- [924f8fb](../../commit/924f8fb) [fixed] Tooltip accepts a style prop
+- [dd064ad](../../commit/dd064ad) [fixed] remove extraneous styling
+- [c837d8d](../../commit/c837d8d) [fixed] Only calculate overlay position on display
+- [fbf9ed6](../../commit/fbf9ed6) [changed] Add deprecation warning that factories will be removed
+- [a4385d3](../../commit/a4385d3) [fixed] Portal doesn't mount extra node
+- [6744b94](../../commit/6744b94) [fixed] 'modalClassName' property for 'ModalTitle'
+- [3e6523a](../../commit/3e6523a) [added] ListGroup supports iterator as child
+- [ec368f0](../../commit/ec368f0) [added] Fade Component, replaces FadeMixin
+- [0503507](../../commit/0503507) [added] Collapse Component, replaces CollapsibleMixin
+- [4fb7e0d](../../commit/4fb7e0d) [changed] Remove Overlay and Modal deprecations
+- [0683df7](../../commit/0683df7) [fixed] 'stacked' progress with 'active' and 'striped' children
+- [a3c5400](../../commit/a3c5400) [fixed] Add missed 'type' property React.PropTypes.<type> checking
+- [a4c065e](../../commit/a4c065e) [added] links to every component / example on Components page
+- [eb0c323](../../commit/eb0c323) [fixed] Position.js typo `componentDidUpate`
+- [9feddf9](../../commit/9feddf9) [fixed] 'componentWillReceiveProps' method name of Position component
+- [c64679f](../../commit/c64679f) [fixed] Active Next and Last button in Pagination when ellipsis=true and items=0
+- [9dae734](../../commit/9dae734) [fixed] Negative page number in Pagination when ellipsis=true and items=1
+- [ffbcf39](../../commit/ffbcf39) [fixed] html id and class attributes handling for Nav
+- [89ea6ed](../../commit/89ea6ed) [fixed] Add missed propType validation for Button 'type' property
+- [b1b6a4c](../../commit/b1b6a4c) [changed] Add two-release deprecation policy
+- [e89b9bc](../../commit/e89b9bc) [removed] Don't need to disable Babel cache
+- [d12d59e](../../commit/d12d59e) [changed] Enabled "loose" Babel transpilation
+- [01c547f](../../commit/01c547f) [fixed] Do not use Babel cache for release build
+- [b67081b](../../commit/b67081b) [fixed] rootClose behavior on replaced elements
+- [fbbb344](../../commit/fbbb344) [fixed] bower template.
+- [fafe46f](../../commit/fafe46f) [changed] Use named exports in index files
+- [6e985b0](../../commit/6e985b0) [removed] Individual files in bower release
+- [598b9d8](../../commit/598b9d8) [fixed] SafeAnchor event ordering
+- [beaa1fa](../../commit/beaa1fa) [changed] `PaginationButton` to use `SafeAnchor`
+- [9c09e2a](../../commit/9c09e2a) [fixed] Keyboard accessibility for anchors serving as buttons
+- [ce5b436](../../commit/ce5b436) [removed] Input type=submit deprecation warning.
 
-## 0.14.3 (November 18, 2015)
 
-### React DOM
-- Added support for `nonce` attribute for `<script>` and `<style>` elements
-- Added support for `reversed` attribute for `<ol>` elements
 
-### React TestUtils Add-on
-- Fixed bug with shallow rendering and function refs
+v0.23.7 - Wed, 01 Jul 2015 15:18:30 GMT
+---------------------------------------
 
-### React CSSTransitionGroup Add-on
-- Fixed bug resulting in timeouts firing incorrectly when mounting and unmounting rapidly
+- [35ea201](../../commit/35ea201) [fixed] Accidental breaking change in Modal trigger
 
-### React on Bower
-- Added `react-dom-server.js` to expose `renderToString` and `renderToStaticMarkup` for usage in the browser
 
 
-## 0.14.2 (November 2, 2015)
+v0.23.6 - Wed, 01 Jul 2015 00:48:02 GMT
+---------------------------------------
 
-### React DOM
-- Fixed bug with development build preventing events from firing in some versions of Internet Explorer & Edge
-- Fixed bug with development build when using es5-sham in older versions of Internet Explorer
-- Added support for `integrity` attribute
-- Fixed bug resulting in `children` prop being coerced to a string for custom elements, which was not the desired behavior
-- Moved `react` from `dependencies` to `peerDependencies` to match expectations and align with `react-addons-*` packages
+- [1b1af04](../../commit/1b1af04) [changed] deprecate ModalTrigger
+- [83b4cbc](../../commit/83b4cbc) [changed] Modal doesn't require ModalTrigger
+- [d70f617](../../commit/d70f617) [changed] tooltips and popovers required id's for a11y
+- [389cf3f](../../commit/389cf3f) [changed] Deprecate OverlayTrigger positioning api and "manual" trigger
+- [5eb8666](../../commit/5eb8666) [added] Overlay component
+- [1638f69](../../commit/1638f69) [added] Position component for custom Overlays
+- [f799110](../../commit/f799110) [added] Portal component; replaces OverlayMixin
+- [97ef415](../../commit/97ef415) [fixed] Modal won't steal focus from children
+- [a8b177a](../../commit/a8b177a) [fixed] Stack overflow with nested Modals
+- [3caa866](../../commit/3caa866) [changed] Update babel-loader
+- [6ffa325](../../commit/6ffa325) [fixed] 'componentClass' property type is 'elementType' now
+- [0e5980f](../../commit/0e5980f) [added] 'elementType' custom prop type validator
+- [8f582d2](../../commit/8f582d2) [changed] Update karma-chrome-launcher. Dev dependency
+- [d4089d0](../../commit/d4089d0) [changed] Update eslint-plugin-mocha. Dev dependency
+- [fd547f4](../../commit/fd547f4) [changed] Update karma-mocha. Dev dependency.
+- [c5797e8](../../commit/c5797e8) [added] componentClass prop to Jumbotron
 
 
-## 0.14.1 (October 28, 2015)
 
-### React DOM
-- Fixed bug where events wouldn't fire in old browsers when using React in development mode
-- Fixed bug preventing use of `dangerouslySetInnerHTML` with Closure Compiler Advanced mode
-- Added support for `srcLang`, `default`, and `kind` attributes for `<track>` elements
-- Added support for `color` attribute
-- Ensured legacy `.props` access on DOM nodes is updated on re-renders
+v0.23.5 - Tue, 23 Jun 2015 01:31:35 GMT
+---------------------------------------
 
-### React TestUtils Add-on
-- Fixed `scryRenderedDOMComponentsWithClass` so it works with SVG
+- [23f9d21](../../commit/23f9d21) [changed] Add missed prop types validations.
+- [320b7ab](../../commit/320b7ab) [changed] Update fs-extra. Dev dependency.
+- [2ffcf5d](../../commit/2ffcf5d) [fixed] Popovers flicker when moving mouse amongst children of the trigger
+- [ccc50e0](../../commit/ccc50e0) [fixed] Accessibility: Panel header uses aria-controls
+- [1e552cc](../../commit/1e552cc) [added] Accessibility: use appropriate ARIA's when an id is given to the tabbed area
+- [8752754](../../commit/8752754) [added] Add linkId prop to NavItem
+- [722969d](../../commit/722969d) [added] Accessibility, add tab roles when type "tabs"
+- [4adaa70](../../commit/4adaa70) [added] Accessibility: role 'alert' and aria-label to Alert component
+- [2594dce](../../commit/2594dce) [fixed] Modal Null Exception when react-bootstrap is loaded before the Body tag
+- [e77bf88](../../commit/e77bf88) [changed] Update eslint. Dev dependency.
 
-### React CSSTransitionGroup Add-on
-- Fix bug preventing `0` to be used as a timeout value
 
-### React on Bower
-- Added `react-dom.js` to `main` to improve compatibility with tooling
 
+v0.23.4 - Tue, 16 Jun 2015 00:37:04 GMT
+---------------------------------------
 
-## 0.14.0 (October 7, 2015)
+- [0ce46b9](../../commit/0ce46b9) [changed] only autofocus modals when enforceFocus is true (the default)
+- [c5855d2](../../commit/c5855d2) [changed] createChainedFunction to chain many functions, and to throw if non-functions are provided.
+- [d18dadb](../../commit/d18dadb) [fixed] container content no longer shifts when overflowing
+- [66f0f92](../../commit/66f0f92) [added] enforceFocus prop to Modal
+- [3869ca2](../../commit/3869ca2) [fixed] Modal doesn't "jump" when container is overflowing
 
-### Major changes
 
-- Split the main `react` package into two: `react` and `react-dom`.  This paves the way to writing components that can be shared between the web version of React and React Native.  This means you will need to include both files and some functions have been moved from `React` to `ReactDOM`.
-- Addons have been moved to separate packages (`react-addons-clone-with-props`, `react-addons-create-fragment`, `react-addons-css-transition-group`, `react-addons-linked-state-mixin`, `react-addons-perf`, `react-addons-pure-render-mixin`, `react-addons-shallow-compare`, `react-addons-test-utils`, `react-addons-transition-group`, `react-addons-update`, `ReactDOM.unstable_batchedUpdates`).
-- Stateless functional components - React components were previously created using React.createClass or using ES6 classes.  This release adds a [new syntax](https://reactjs.org/docs/reusable-components.html#stateless-functions) where a user defines a single [stateless render function](https://reactjs.org/docs/reusable-components.html#stateless-functions) (with one parameter: `props`) which returns a JSX element, and this function may be used as a component.
-- Refs to DOM components as the DOM node itself. Previously the only useful thing you can do with a DOM component is call `getDOMNode()` to get the underlying DOM node. Starting with this release, a ref to a DOM component _is_ the actual DOM node. **Note that refs to custom (user-defined) components work exactly as before; only the built-in DOM components are affected by this change.**
 
+v0.23.3 - Fri, 12 Jun 2015 21:46:30 GMT
+---------------------------------------
 
-### Breaking changes
+- [9ca26e9](../../commit/9ca26e9) [added] contains "polyfill" to domUtils
+- [3a254a1](../../commit/3a254a1) [added] Deprecation warning for individual file use in the Bower release
+- [73c7705](../../commit/73c7705) [changed] Update chai. Dev dependency.
+- [3ca90c7](../../commit/3ca90c7) [changed] Update karma-sinon-chai. Dev dependency.
+- [cc4e820](../../commit/cc4e820) [changed] Update fs-extra. Dev dependency.
 
-- `React.initializeTouchEvents` is no longer necessary and has been removed completely. Touch events now work automatically.
-- Add-Ons: Due to the DOM node refs change mentioned above, `TestUtils.findAllInRenderedTree` and related helpers are no longer able to take a DOM component, only a custom component.
-- The `props` object is now frozen, so mutating props after creating a component element is no longer supported. In most cases, [`React.cloneElement`](https://reactjs.org/docs/react-api.html#cloneelement) should be used instead. This change makes your components easier to reason about and enables the compiler optimizations mentioned above.
-- Plain objects are no longer supported as React children; arrays should be used instead. You can use the [`createFragment`](https://reactjs.org/docs/create-fragment.html) helper to migrate, which now returns an array.
-- Add-Ons: `classSet` has been removed. Use [classnames](https://github.com/JedWatson/classnames) instead.
-- Web components (custom elements) now use native property names.  Eg: `class` instead of `className`.
 
-### Deprecations
 
-- `this.getDOMNode()` is now deprecated and `ReactDOM.findDOMNode(this)` can be used instead. Note that in the common case, `findDOMNode` is now unnecessary since a ref to the DOM component is now the actual DOM node.
-- `setProps` and `replaceProps` are now deprecated. Instead, call ReactDOM.render again at the top level with the new props.
-- ES6 component classes must now extend `React.Component` in order to enable stateless function components. The [ES3 module pattern](https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html#other-languages) will continue to work.
-- Reusing and mutating a `style` object between renders has been deprecated. This mirrors our change to freeze the `props` object.
-- Add-Ons: `cloneWithProps` is now deprecated. Use [`React.cloneElement`](https://reactjs.org/docs/react-api.html#cloneelement) instead (unlike `cloneWithProps`, `cloneElement` does not merge `className` or `style` automatically; you can merge them manually if needed).
-- Add-Ons: To improve reliability, `CSSTransitionGroup` will no longer listen to transition events. Instead, you should specify transition durations manually using props such as `transitionEnterTimeout={500}`.
+v0.23.2 - Mon, 08 Jun 2015 18:56:48 GMT
+---------------------------------------
 
-### Notable enhancements
+- [7211dcb](../../commit/7211dcb) [added] Add prevIcon and nextIcon props as node proptypes to Carousel
+- [5734ec3](../../commit/5734ec3) [added] Pagination component
+- [2f8c454](../../commit/2f8c454) [changed] Assert ProgressBar children can be ProgressBar only.
+- [2c46820](../../commit/2c46820) [added] `createSelectedEvent` for consistent onSelect handling
+- [c2ff9ad](../../commit/c2ff9ad) [added] property disabled on MenuItem
 
-- Added `React.Children.toArray` which takes a nested children object and returns a flat array with keys assigned to each child. This helper makes it easier to manipulate collections of children in your `render` methods, especially if you want to reorder or slice `this.props.children` before passing it down. In addition, `React.Children.map` now returns plain arrays too.
-- React uses `console.error` instead of `console.warn` for warnings so that browsers show a full stack trace in the console. (Our warnings appear when you use patterns that will break in future releases and for code that is likely to behave unexpectedly, so we do consider our warnings to be “must-fix” errors.)
-- Previously, including untrusted objects as React children [could result in an XSS security vulnerability](http://danlec.com/blog/xss-via-a-spoofed-react-element). This problem should be avoided by properly validating input at the application layer and by never passing untrusted objects around your application code. As an additional layer of protection, [React now tags elements](https://github.com/facebook/react/pull/4832) with a specific [ES2015 (ES6) `Symbol`](http://www.2ality.com/2014/12/es6-symbols.html) in browsers that support it, in order to ensure that React never considers untrusted JSON to be a valid element. If this extra security protection is important to you, you should add a `Symbol` polyfill for older browsers, such as the one included by [Babel’s polyfill](https://babeljs.io/docs/usage/polyfill/).
-- When possible, React DOM now generates XHTML-compatible markup.
-- React DOM now supports these standard HTML attributes: `capture`, `challenge`, `inputMode`, `is`, `keyParams`, `keyType`, `minLength`, `summary`, `wrap`. It also now supports these non-standard attributes: `autoSave`, `results`, `security`.
-- React DOM now supports these SVG attributes, which render into namespaced attributes: `xlinkActuate`, `xlinkArcrole`, `xlinkHref`, `xlinkRole`, `xlinkShow`, `xlinkTitle`, `xlinkType`, `xmlBase`, `xmlLang`, `xmlSpace`.
-- The `image` SVG tag is now supported by React DOM.
-- In React DOM, arbitrary attributes are supported on custom elements (those with a hyphen in the tag name or an `is="..."` attribute).
-- React DOM now supports these media events on `audio` and `video` tags: `onAbort`, `onCanPlay`, `onCanPlayThrough`, `onDurationChange`, `onEmptied`, `onEncrypted`, `onEnded`, `onError`, `onLoadedData`, `onLoadedMetadata`, `onLoadStart`, `onPause`, `onPlay`, `onPlaying`, `onProgress`, `onRateChange`, `onSeeked`, `onSeeking`, `onStalled`, `onSuspend`, `onTimeUpdate`, `onVolumeChange`, `onWaiting`.
-- Many small performance improvements have been made.
-- Many warnings show more context than before.
-- Add-Ons: A [`shallowCompare`](https://github.com/facebook/react/pull/3355) add-on has been added as a migration path for `PureRenderMixin` in ES6 classes.
-- Add-Ons: `CSSTransitionGroup` can now use [custom class names](https://github.com/facebook/react/blob/48942b85/docs/docs/10.1-animation.md#custom-classes) instead of appending `-enter-active` or similar to the transition name.
 
-### New helpful warnings
 
-- React DOM now warns you when nesting HTML elements invalidly, which helps you avoid surprising errors during updates.
-- Passing `document.body` directly as the container to `ReactDOM.render` now gives a warning as doing so can cause problems with browser extensions that modify the DOM.
-- Using multiple instances of React together is not supported, so we now warn when we detect this case to help you avoid running into the resulting problems.
+v0.23.1 - Tue, 02 Jun 2015 16:57:57 GMT
+---------------------------------------
 
-### Notable bug fixes
+- [4d265f0](../../commit/4d265f0) [fixed] Use babel api to avoid command line conflicts between Linux and Windows
+- [0cfbf3b](../../commit/0cfbf3b) [fixed] IE8 will now close an open DropdownButton menu when clicking button
+- [d105749](../../commit/d105749) [added] utils object to exported src/index
+- [29bc64f](../../commit/29bc64f) [changed] Remove Dev dependency babel-plugin-object-assign.
+- [1fec852](../../commit/1fec852) [changed] Update karma-phantomjs-launcher. Dev dependency.
+- [f494604](../../commit/f494604) [changed] Update eslint. Dev dependency.
+- [a4331ed](../../commit/a4331ed) [changed] Make the brand name consistent.
+- [b213be0](../../commit/b213be0) [changed] Remove ES6 sources from npm distribution.
+- [73c5ec9](../../commit/73c5ec9) [changed] Remove extraneous utils/Object.assign.js
+- [935171f](../../commit/935171f) [added] Now accepting a `block` property on the ButtonGroup component. Closes #240.
+- [dfec023](../../commit/dfec023) [added] CustomPropType.all to allow multiple validations
 
-- Click events are handled by React DOM more reliably in mobile browsers, particularly in Mobile Safari.
-- SVG elements are created with the correct namespace in more cases.
-- React DOM now renders `<option>` elements with multiple text children properly and renders `<select>` elements on the server with the correct option selected.
-- When two separate copies of React add nodes to the same document (including when a browser extension uses React), React DOM tries harder not to throw exceptions during event handling.
-- Using non-lowercase HTML tag names in React DOM (e.g., `React.createElement('DIV')`) no longer causes problems, though we continue to recommend lowercase for consistency with the JSX tag name convention (lowercase names refer to built-in components, capitalized names refer to custom components).
-- React DOM understands that these CSS properties are unitless and does not append “px” to their values: `animationIterationCount`, `boxOrdinalGroup`, `flexOrder`, `tabSize`, `stopOpacity`.
-- Add-Ons: When using the test utils, `Simulate.mouseEnter` and `Simulate.mouseLeave` now work.
-- Add-Ons: ReactTransitionGroup now correctly handles multiple nodes being removed simultaneously.
 
 
-### React Tools / Babel
+v0.23.0 - Tue, 26 May 2015 19:32:52 GMT
+---------------------------------------
 
-#### Breaking Changes
+- [fd24317](../../commit/fd24317) [changed] Removed `collapsable` deprecated functionality.
+- [3ebac95](../../commit/3ebac95) [fixed] bug #731. `babel ES6 import` + `React` quirk.
+- [0c61f46](../../commit/0c61f46) [changed] Moving type=static out of Input
+- [2749cfd](../../commit/2749cfd) [added] CustomPropTypes.singlePropFrom
+- [536c3e0](../../commit/536c3e0) [fixed] Replaced document with ownerDocument in Modal
+- [91f0222](../../commit/91f0222) [changed] Update css-loader. Dev dependency.
+- [66e41a4](../../commit/66e41a4) [fixed] Fix scroll top calculation for overlays
+- [5313abe](../../commit/5313abe) [fixed] Modal is focused when opened, for improved accessibility
+- [50d058a](../../commit/50d058a) [fixed] server side rendering for Modal component
+- [c57d6b0](../../commit/c57d6b0) [changed] Update css-loader. Dev dependency.
 
-- The `react-tools` package and `JSXTransformer.js` browser file [have been deprecated](https://reactjs.org/blog/2015/06/12/deprecating-jstransform-and-react-tools.html). You can continue using version `0.13.3` of both, but we no longer support them and recommend migrating to [Babel](https://babeljs.io), which has built-in support for React and JSX.
 
-#### New Features
+v0.22.6 - Wed, 20 May 2015 16:46:29 GMT
+---------------------------------------
 
-- Babel 5.8.24 introduces **Inlining React elements:** The `optimisation.react.inlineElements` transform converts JSX elements to object literals like `{type: 'div', props: ...}` instead of calls to `React.createElement`.  This should only be enabled in production, since it disables some development warnings/checks.
-- Babel 5.8.24 introduces **Constant hoisting for React elements:** The `optimisation.react.constantElements` transform hoists element creation to the top level for subtrees that are fully static, which reduces calls to `React.createElement` and the resulting allocations. More importantly, it tells React that the subtree hasn’t changed so React can completely skip it when reconciling.  This should only be enabled in production, since it disables some development warnings/checks.
+- [2a35eab](../../commit/2a35eab) [fixed] Fix CodeMirrorEditor binding
+- [5dc0ac2](../../commit/5dc0ac2) [added] Enable rootClose for OverlayTrigger
 
 
-## 0.13.3 (May 8, 2015)
+v0.22.5 - Tue, 19 May 2015 20:40:51 GMT
+---------------------------------------
 
-### React Core
+- [dc7ef19](../../commit/dc7ef19) [added] dialogClassName prop to modal to be able to pass custom css class to modal-dialog div
+- [658fa39](../../commit/658fa39) [fixed] Remove unused variable
 
-#### New Features
 
-* Added `clipPath` element and attribute for SVG
-* Improved warnings for deprecated methods in plain JS classes
+v0.22.4 - Mon, 18 May 2015 16:53:06 GMT
+---------------------------------------
 
-#### Bug Fixes
+- [9d17d56](../../commit/9d17d56) [added] Thumbnail component
+- [db018fa](../../commit/db018fa) [fixed] Put AMD modules under correct path
+- [0904adc](../../commit/0904adc) [added] Active property to MenuItem component
+- [1658142](../../commit/1658142) [added] Property for animation on Popover and Tooltip
+- [4f37560](../../commit/4f37560) [fixed] Update classnames dep version for Bower
+- [f6e7d67](../../commit/f6e7d67) [fixed] Bower cannot use code from react/lib.
+- [1531ac9](../../commit/1531ac9) [added] DropdownButton now applies onClick prop to Button
+- [ecb0861](../../commit/ecb0861) [fixed] Fix propType warning in ButtonInputExample
+- [592a346](../../commit/592a346) [fixed] Forward classes to panel title
 
-* Loosened `dangerouslySetInnerHTML` restrictions so `{__html: undefined}` will no longer throw
-* Fixed extraneous context warning with non-pure `getChildContext`
-* Ensure `replaceState(obj)` retains prototype of `obj`
 
-### React with Add-ons
+v0.22.3 - Thu, 14 May 2015 22:19:11 GMT
+---------------------------------------
 
-### Bug Fixes
+- [96baa15](../../commit/96baa15) [fixed] Fix propTypes for overlays
 
-* Test Utils: Ensure that shallow rendering works when components define `contextTypes`
 
+v0.22.2 - Thu, 14 May 2015 20:36:17 GMT
+---------------------------------------
 
-## 0.13.2 (April 18, 2015)
+- [03211db](../../commit/03211db) [fixed] Fit overlay within viewport boundary
+- [576827f](../../commit/576827f) [changed] Introducing ButtonInput
 
-### React Core
 
-#### New Features
+v0.22.1 - Thu, 14 May 2015 17:54:32 GMT
+---------------------------------------
 
-* Added `strokeDashoffset`, `flexPositive`, `flexNegative` to the list of unitless CSS properties
-* Added support for more DOM properties:
-  * `scoped` - for `<style>` elements
-  * `high`, `low`, `optimum` - for `<meter>` elements
-  * `unselectable` - IE-specific property to prevent user selection
+- [d3f57c5](../../commit/d3f57c5) [added] TabbedArea allows disabled tabs
 
-#### Bug Fixes
 
-* Fixed a case where re-rendering after rendering null didn't properly pass context
-* Fixed a case where re-rendering after rendering with `style={null}` didn't properly update `style`
-* Update `uglify` dependency to prevent a bug in IE8
-* Improved warnings
+v0.22.0 - Wed, 13 May 2015 18:31:52 GMT
+---------------------------------------
 
-### React with Add-Ons
+- [061bef2](../../commit/061bef2) [fixed] update link to react-router-bootstrap in README
+- [0fb9b57](../../commit/0fb9b57) [changed] Updated extract-text-webpack-plugin. Dev dependency.
+- [ca689c0](../../commit/ca689c0) [changed] Updated eslint dev-dependency
+- [0f90799](../../commit/0f90799) [added] react-hot-loader when developing docs
+- [4cd5845](../../commit/4cd5845) [added] FormGroup/Input bsSize now propgates correctly as form-group-\* classes
+- [6ce8870](../../commit/6ce8870) [added] Introduction Page.
+- [1c6c74b](../../commit/1c6c74b) [fixed] Modal div.modal-content should not have hidden class
+- [51a205f](../../commit/51a205f) [changed] collapsable => collapsible property
+- [f77c955](../../commit/f77c955) [changed] Updated classnames dependency
+- [5a76e94](../../commit/5a76e94) [added] favicon
+- [8da11b4](../../commit/8da11b4) [added] convenience factories for non-JSX users in lib/factories
 
-#### Bug Fixes
 
-* Immutability Helpers: Ensure it supports `hasOwnProperty` as an object key
+v0.21.2 - Fri, 01 May 2015 19:36:56 GMT
+---------------------------------------
 
-### React Tools
+- [a07aa20](../../commit/a07aa20) [fixed] Bug introduced by new deprecation code.
+- [fef8984](../../commit/fef8984) [fixed] #597 able to set ID on ListGroup
 
-* Improve documentation for new options
 
+v0.21.1 - Wed, 29 Apr 2015 21:44:50 GMT
+---------------------------------------
 
-## 0.13.1 (March 16, 2015)
+- [3767c43](../../commit/3767c43) [added] Added buttonClassName to DropdownButton
+- [e59c4f8](../../commit/e59c4f8) [added] Clarification about implementing components.
+- [0105127](../../commit/0105127) [changed] Renamed Collapsable* => Collapsible*
+- [6b9c250](../../commit/6b9c250) [fixed] Fix for bug 547 in tools/release.
+- [b86e03e](../../commit/b86e03e) [fixed] ListGroup rendering a ul when ListGroupItem has onClick handler
+- [ddc8a85](../../commit/ddc8a85) [changed] Updated eslint dev-dependency
+- [18c22ba](../../commit/18c22ba) [changed] Updated style-loader dev-dependency
+- [01c16c1](../../commit/01c16c1) [changed] Updated css-loader dev-dependency
+- [c295a9a](../../commit/c295a9a) [fixed] ModalTrigger passes onFocus prop and onBlur prop to child
+- [131669b](../../commit/131669b) [fixed] ModalTrigger passes onMouseOver prop and onMouseOut prop to child
+- [1249eff](../../commit/1249eff) [fixed] OverlayTrigger passes onClick prop to child
+- [5f565b9](../../commit/5f565b9) [added] Docs example of passing component to navbar brand.
+- [7811ce2](../../commit/7811ce2) [added] Dry run and verbose options to release process
+- [22da8f9](../../commit/22da8f9) [fixed] ListGroup children array bugs. Fixes #548
+- [b17a7b3](../../commit/b17a7b3) [added] release-docs script
+- [4fedc95](../../commit/4fedc95) [fixed] Bug in Server vs Client side rendering of Navbar
+- [1d8b7c7](../../commit/1d8b7c7) [fixes] #516 [added] TabbedArea NavItem renderTab() className
+- [725deaa](../../commit/725deaa) [changed] Updated css-loader dev-dependency
+- [eb29b11](../../commit/eb29b11) [changed] Updated style-loader dev-dependency
+- [bc8cd5c](../../commit/bc8cd5c) [fixed] Fix for bug507.
 
-### React Core
 
-#### Bug Fixes
+v0.21.0 - Tue, 21 Apr 2015 13:38:38 GMT
+---------------------------------------
 
-* Don't throw when rendering empty `<select>` elements
-* Ensure updating `style` works when transitioning from `null`
+- [e92a64b](../../commit/e92a64b) [fixed] Handle multiple children in Badge
+- [c1b189f](../../commit/c1b189f) [changed] Updated babel* tools. dev-dependency
+- [a58eab5](../../commit/a58eab5) [fixed] Fix 'import from' => 'import'
+- [276c2bc](../../commit/276c2bc) [fixed] ProgressBar percentage issue when stacked
+- [e1c95b3](../../commit/e1c95b3) [changed] Renamed constants to styleMaps and added styleMaps.addStyle()
+- [20b608f](../../commit/20b608f) [fixed] Add missed semicolons.
+- [2111799](../../commit/2111799) [fixed] Remove unused variables.
+- [0e6b62a](../../commit/0e6b62a) [fixed] typo
+- [0c87128](../../commit/0c87128) [fixed] `ListGroup` outputs `<ul>` or `<div>` depending on `ListGroupItem` (defaults to `<ul>` if no `ListGroupItem`). `ListGroupItem` outputs `<li>` or `<a>` if `href` prop is set.
 
-### React with Add-Ons
 
-#### Bug Fixes
+v0.20.3 - Fri, 10 Apr 2015 19:50:22 GMT
+---------------------------------------
 
-* TestUtils: Don't warn about `getDOMNode` for ES6 classes
-* TestUtils: Ensure wrapped full page components (`<html>`, `<head>`, `<body>`) are treated as DOM components
-* Perf: Stop double-counting DOM components
+- [3ecd393](../../commit/3ecd393) [fixed] Missing PropType Validations
+- [8a9e95c](../../commit/8a9e95c) [fixed] Include missing PropType validations
+- [6dfcf36](../../commit/6dfcf36) [changed] Internal variables classSet to classNames
 
-### React Tools
 
-#### Bug Fixes
+v0.20.2 - Tue, 07 Apr 2015 01:51:55 GMT
+---------------------------------------
 
-* Fix option parsing for `--non-strict-es6module`
+- [723ee4d](../../commit/723ee4d) [fixed] Release scripts usage of rimraf
+- [7175431](../../commit/7175431) [fixed] Don't try to access .ownerDocument on null
+- [a58cff9](../../commit/a58cff9) [fixed] Numerous ESlint warnings (Removes 145 warnings)
+- [c6c4108](../../commit/c6c4108) [added] Twitter follow link to docs page footer
+- [20472b9](../../commit/20472b9) [fixed] Windows build
 
 
-## 0.13.0 (March 10, 2015)
+v0.20.1 - Sat, 04 Apr 2015 14:22:18 GMT
+---------------------------------------
 
-### React Core
+- [a060fbc](../../commit/a060fbc) [fixed] Re-add missing constants to public API
 
-#### Breaking Changes
 
-* Deprecated patterns that warned in 0.12 no longer work: most prominently, calling component classes without using JSX or React.createElement and using non-component functions with JSX or createElement
-* Mutating `props` after an element is created is deprecated and will cause warnings in development mode; future versions of React will incorporate performance optimizations assuming that props aren't mutated
-* Static methods (defined in `statics`) are no longer autobound to the component class
-* `ref` resolution order has changed slightly such that a ref to a component is available immediately after its `componentDidMount` method is called; this change should be observable only if your component calls a parent component's callback within your `componentDidMount`, which is an anti-pattern and should be avoided regardless
-* Calls to `setState` in life-cycle methods are now always batched and therefore asynchronous. Previously the first call on the first mount was synchronous.
-* `setState` and `forceUpdate` on an unmounted component now warns instead of throwing. That avoids a possible race condition with Promises.
-* Access to most internal properties has been completely removed, including `this._pendingState` and `this._rootNodeID`.
+v0.20.0 - Tue, 31 Mar 2015 13:04:40 GMT
+---------------------------------------
 
-#### New Features
+- [f1438b5](../../commit/f1438b5) [changed] Updated eslint-plugin-react dev-dependency
+- [c8dda3f](../../commit/c8dda3f) [added] HuBoard badge and link
+- [ee0382e](../../commit/ee0382e) [fixed] Use .ownerDocument instead of root document
+- [182344a](../../commit/182344a) [changed] Updated express dev-dependency
+- [6edadbd](../../commit/6edadbd) [changed] Updated mocha dev-dependency
+- [64ac86d](../../commit/64ac86d) [changed] React dependency from 0.13.0 -> 0.13.1
+- [367b870](../../commit/367b870) [changed] Updated karma-chai dev-dependency
+- [1956d2a](../../commit/1956d2a) [changed] Updated style-loader dev-dependency
+- [76c87bf](../../commit/76c87bf) [changed] Updated ESLint dev-dependency
+- [84b9113](../../commit/84b9113) [changed] Update Bootstrap to 3.3.4
+- [bfb3e6c](../../commit/bfb3e6c) [added] `standalone` prop to Input, which will not render the `form-group` class
+- [721aacc](../../commit/721aacc) [fixed] Documentation on react install
+- [6907e03](../../commit/6907e03) [changed] Renamed src/main.js -> src/index.js
+- [5118b42](../../commit/5118b42) [added] Test for carousel control behaviour with wrap=true
+- [ea479db](../../commit/ea479db) [fixed] show carousel controls if wrap is enabled
 
-* Support for using ES6 classes to build React components; see the [v0.13.0 beta 1 notes](https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html) for details.
-* Added new top-level API `React.findDOMNode(component)`, which should be used in place of `component.getDOMNode()`. The base class for ES6-based components will not have `getDOMNode`. This change will enable some more patterns moving forward.
-* Added a new top-level API `React.cloneElement(el, props)` for making copies of React elements – see the [v0.13 RC2 notes](https://reactjs.org/blog/2015/03/03/react-v0.13-rc2.html#react.cloneelement) for more details.
-* New `ref` style, allowing a callback to be used in place of a name: `<Photo ref={(c) => this._photo = c} />` allows you to reference the component with `this._photo` (as opposed to `ref="photo"` which gives `this.refs.photo`).
-* `this.setState()` can now take a function as the first argument for transactional state updates, such as `this.setState((state, props) => ({count: state.count + 1}));` – this means that you no longer need to use `this._pendingState`, which is now gone.
-* Support for iterators and immutable-js sequences as children.
 
-#### Deprecations
+v0.19.1 - Thu, 26 Mar 2015 19:37:01 GMT
+---------------------------------------
 
-* `ComponentClass.type` is deprecated. Just use `ComponentClass` (usually as `element.type === ComponentClass`).
-* Some methods that are available on `createClass`-based components are removed or deprecated from ES6 classes (`getDOMNode`, `replaceState`, `isMounted`, `setProps`, `replaceProps`).
+- [2b7d235](../../commit/2b7d235) [fixed] Re-added CollapsableNav to public API
 
-### React with Add-Ons
 
-#### New Features
+v0.19.0 - Wed, 25 Mar 2015 21:25:57 GMT
+---------------------------------------
 
-* [`React.addons.createFragment` was added](https://reactjs.org/docs/create-fragment.html) for adding keys to entire sets of children.
+- [98ee978](../../commit/98ee978) [changed] Source to ES6 using Babel and Webpack
 
-#### Deprecations
 
-* `React.addons.classSet` is now deprecated. This functionality can be replaced with several freely available modules. [classnames](https://www.npmjs.com/package/classnames) is one such module.
-* Calls to `React.addons.cloneWithProps` can be migrated to use `React.cloneElement` instead – make sure to merge `style` and `className` manually if desired.
+v0.18.0 - Tue, 24 Mar 2015 02:56:15 GMT
+---------------------------------------
 
-### React Tools
+- [728c2b0](../../commit/728c2b0) [fixed] docs CodeMirror scroll height too big
+- [d282621](../../commit/d282621) [fixed] Split buttons with React 0.13
+- [549da6e](../../commit/549da6e) [added] react-router dependency for docs
+- [804c24a](../../commit/804c24a) [added] Support for React 0.13.x
+- [4c26075](../../commit/4c26075) [fixed] Build status badge
+- [70f8596](../../commit/70f8596) [added] Travis CI Optimization
 
-#### Breaking Changes
 
-* When transforming ES6 syntax, `class` methods are no longer enumerable by default, which requires `Object.defineProperty`; if you support browsers such as IE8, you can pass `--target es3` to mirror the old behavior
+v0.17.0 - Tue, 17 Mar 2015 15:03:27 GMT
+---------------------------------------
 
-#### New Features
+- [4fae871](../../commit/4fae871) [added] CollapsableNav implements bootstrap markup for navbar-collapse
+- [befed83](../../commit/befed83) [fixed] All panel-* classes dynamic based on bsStyle prop
+- [de6f7dd](../../commit/de6f7dd) [fixed] CollapsableMixin fixed size
+- [7cc4747](../../commit/7cc4747) [fixed] Added role="button" to NavItem for aria compliance.
+- [3b6ba7a](../../commit/3b6ba7a) [fixed] Col Offset/Pull/Push of zero. Fixes #406
+- [66c439f](../../commit/66c439f) [fixed] OverlayTrigger improvement related to #353 . Helps reduce browser reflows for lots of multiple OverlayTriggers being rendered at once. Before: http://i.imgur.com/e4UZ5l6.png , http://i.imgur.com/Tw39F9t.png After: http://i.imgur.com/bU0f7VY.png
 
-* `--target` option is available on the jsx command, allowing users to specify and ECMAScript version to target.
-  * `es5` is the default.
-  * `es3` restores the previous default behavior. An additional transform is added here to ensure the use of reserved words as properties is safe (eg `this.static` will become `this['static']` for IE8 compatibility).
-* The transform for the call spread operator has also been enabled.
 
-### JSXTransformer
+v0.16.1 - Tue, 03 Mar 2015 23:04:19 GMT
+---------------------------------------
 
-#### Breaking Changes
+- [71ff264](../../commit/71ff264) [added] bsSize prop to Input, supporting input groups
 
-* The return value of `transform` now contains `sourceMap` as a JS object already, not an instance of `SourceMapGenerator`.
 
-### JSX
+v0.16.0 - Fri, 27 Feb 2015 14:01:37 GMT
+---------------------------------------
 
-#### Breaking Changes
-* A change was made to how some JSX was parsed, specifically around the use of `>` or `}` when inside an element. Previously it would be treated as a string but now it will be treated as a parse error. The [`jsx_orphaned_brackets_transformer`](https://www.npmjs.com/package/jsx_orphaned_brackets_transformer) package on npm can be used to find and fix potential issues in your JSX code.
+- [25b4143](../../commit/25b4143) [fixed] Define toggleNavKey in the propTypes
+- [1a4ae1d](../../commit/1a4ae1d) [fixed] Fix rendering Navbar header when toggleNavKey is 0
+- [13f395d](../../commit/13f395d) [added] bsStyle prop support for Modal to set the header color
+- [c822837](../../commit/c822837) [removed] non-standard onClick props for ListGroup and ListGroupItem
+- [1556e63](../../commit/1556e63) [added] Example for collapsable Navbar in docs.
 
 
-## 0.12.2 (December 18, 2014)
+v0.15.1 - Tue, 17 Feb 2015 14:30:54 GMT
+---------------------------------------
 
-### React Core
+- [587a34f](../../commit/587a34f) [fixed] Include .npmignore so compile lib dir is published
 
-* Added support for more HTML attributes: `formAction`, `formEncType`, `formMethod`, `formTarget`, `marginHeight`, `marginWidth`
-* Added `strokeOpacity` to the list of unitless CSS properties
-* Removed trailing commas (allows npm module to be bundled and used in IE8)
-* Fixed bug resulting in error when passing `undefined` to `React.createElement` - now there is a useful warning
 
-### React Tools
+v0.15.0 - Mon, 16 Feb 2015 02:41:59 GMT
+---------------------------------------
 
-* JSX-related transforms now always use double quotes for props and `displayName`
-
-
-## 0.12.1 (November 18, 2014)
-
-### React Tools
-
-* Types transform updated with latest support
-* jstransform version updated with improved ES6 transforms
-* Explicit Esprima dependency removed in favor of using Esprima information exported by jstransform
-
-
-## 0.12.0 (October 28, 2014)
-
-### React Core
-
-#### Breaking Changes
-
-* `key` and `ref` moved off props object, now accessible on the element directly
-* React is now BSD licensed with accompanying Patents grant
-* Default prop resolution has moved to Element creation time instead of mount time, making them effectively static
-* `React.__internals` is removed - it was exposed for DevTools which no longer needs access
-* Composite Component functions can no longer be called directly - they must be wrapped with `React.createFactory` first. This is handled for you when using JSX.
-
-#### New Features
-
-* Spread operator (`{...}`) introduced to deprecate `this.transferPropsTo`
-* Added support for more HTML attributes: `acceptCharset`, `classID`, `manifest`
-
-#### Deprecations
-
-* `React.renderComponent` --> `React.render`
-* `React.renderComponentToString` --> `React.renderToString`
-* `React.renderComponentToStaticMarkup` --> `React.renderToStaticMarkup`
-* `React.isValidComponent` --> `React.isValidElement`
-* `React.PropTypes.component` --> `React.PropTypes.element`
-* `React.PropTypes.renderable` --> `React.PropTypes.node`
-* **DEPRECATED** `React.isValidClass`
-* **DEPRECATED** `instance.transferPropsTo`
-* **DEPRECATED** Returning `false` from event handlers to preventDefault
-* **DEPRECATED** Convenience Constructor usage as function, instead wrap with `React.createFactory`
-* **DEPRECATED** use of `key={null}` to assign implicit keys
-
-#### Bug Fixes
-
-* Better handling of events and updates in nested results, fixing value restoration in "layered" controlled components
-* Correctly treat `event.getModifierState` as case sensitive
-* Improved normalization of `event.charCode`
-* Better error stacks when involving autobound methods
-* Removed DevTools message when the DevTools are installed
-* Correctly detect required language features across browsers
-* Fixed support for some HTML attributes:
-  * `list` updates correctly now
-  * `scrollLeft`, `scrollTop` removed, these should not be specified as props
-* Improved error messages
-
-### React With Addons
-
-#### New Features
-
-* `React.addons.batchedUpdates` added to API for hooking into update cycle
-
-#### Breaking Changes
-
-* `React.addons.update` uses `assign` instead of `copyProperties` which does `hasOwnProperty` checks. Properties on prototypes will no longer be updated correctly.
-
-#### Bug Fixes
-
-* Fixed some issues with CSS Transitions
-
-### JSX
-
-#### Breaking Changes
-
-* Enforced convention: lower case tag names are always treated as HTML tags, upper case tag names are always treated as composite components
-* JSX no longer transforms to simple function calls
-
-#### New Features
-
-* `@jsx React.DOM` no longer required
-* spread (`{...}`) operator introduced to allow easier use of props
-
-#### Bug Fixes
-
-* JSXTransformer: Make sourcemaps an option when using APIs directly (eg, for react-rails)
-
-
-## 0.11.2 (September 16, 2014)
-
-### React Core
-
-#### New Features
-
-* Added support for `<dialog>` element and associated `open` attribute
-* Added support for `<picture>` element and associated `media` and `sizes` attributes
-* Added `React.createElement` API in preparation for React v0.12
-  * `React.createDescriptor` has been deprecated as a result
-
-### JSX
-
-* `<picture>` is now parsed into `React.DOM.picture`
-
-### React Tools
-
-* Update `esprima` and `jstransform` for correctness fixes
-* The `jsx` executable now exposes a `--strip-types` flag which can be used to remove TypeScript-like type annotations
-  * This option is also exposed to `require('react-tools').transform` as `stripTypes`
-
-## 0.11.1 (July 24, 2014)
-
-### React Core
-
-#### Bug Fixes
-* `setState` can be called inside `componentWillMount` in non-DOM environments
-* `SyntheticMouseEvent.getEventModifierState` correctly renamed to `getModifierState`
-* `getModifierState` correctly returns a `boolean`
-* `getModifierState` is now correctly case sensitive
-* Empty Text node used in IE8 `innerHTML` workaround is now removed, fixing rerendering in certain cases
-
-### JSX
-* Fix duplicate variable declaration in JSXTransformer (caused issues in some browsers)
-
-
-## 0.11.0 (July 17, 2014)
-
-### React Core
-
-#### Breaking Changes
-* `getDefaultProps()` is now called once per class and shared across all instances
-* `MyComponent()` now returns a descriptor, not an instance
-* `React.isValidComponent` and `React.PropTypes.component` validate *descriptors*, not component instances
-* Custom `propType` validators should return an `Error` instead of logging directly
-
-#### New Features
-* Rendering to `null`
-* Keyboard events include normalized `e.key` and `e.getModifierState()` properties
-* New normalized `onBeforeInput` event
-* `React.Children.count` has been added as a helper for counting the number of children
-
-#### Bug Fixes
-
-* Re-renders are batched in more cases
-* Events: `e.view` properly normalized
-* Added Support for more HTML attributes (`coords`, `crossOrigin`, `download`, `hrefLang`, `mediaGroup`, `muted`, `scrolling`, `shape`, `srcSet`, `start`, `useMap`)
-* Improved SVG support
-  * Changing `className` on a mounted SVG component now works correctly
-  * Added support for elements `mask` and `tspan`
-  * Added support for attributes `dx`, `dy`, `fillOpacity`, `fontFamily`, `fontSize`, `markerEnd`, `markerMid`, `markerStart`, `opacity`, `patternContentUnits`, `patternUnits`, `preserveAspectRatio`, `strokeDasharray`, `strokeOpacity`
-* CSS property names with vendor prefixes (`Webkit`, `ms`, `Moz`, `O`) are now handled properly
-* Duplicate keys no longer cause a hard error; now a warning is logged (and only one of the children with the same key is shown)
-* `img` event listeners are now unbound properly, preventing the error "Two valid but unequal nodes with the same `data-reactid`"
-* Added explicit warning when missing polyfills
-
-### React With Addons
-* PureRenderMixin: a mixin which helps optimize "pure" components
-* Perf: a new set of tools to help with performance analysis
-* Update: New `$apply` command to transform values
-* TransitionGroup bug fixes with null elements, Android
-
-### React NPM Module
-* Now includes the pre-built packages under `dist/`.
-* `envify` is properly listed as a dependency instead of a peer dependency
-
-### JSX
-* Added support for namespaces, eg `<Components.Checkbox />`
-* JSXTransformer
-  * Enable the same `harmony` features available in the command line with `<script type="text/jsx;harmony=true">`
-  * Scripts are downloaded in parallel for more speed. They are still executed in order (as you would expect with normal script tags)
-  * Fixed a bug preventing sourcemaps from working in Firefox
-
-### React Tools Module
-* Improved readme with usage and API information
-* Improved ES6 transforms available with `--harmony` option
-* Added `--source-map-inline` option to the `jsx` executable
-* New `transformWithDetails` API which gives access to the raw sourcemap data
-
-
-## 0.10.0 (March 21, 2014)
-
-### React Core
-
-#### New Features
-* Added warnings to help migrate towards descriptors
-* Made it possible to server render without React-related markup (`data-reactid`, `data-react-checksum`). This DOM will not be mountable by React. [Read the docs for `React.renderComponentToStaticMarkup`](https://reactjs.org/docs/top-level-api.html#react.rendercomponenttostaticmarkup)
-* Added support for more attributes:
-  * `srcSet` for `<img>` to specify images at different pixel ratios
-  * `textAnchor` for SVG
-
-#### Bug Fixes
-* Ensure all void elements don’t insert a closing tag into the markup.
-* Ensure `className={false}` behaves consistently
-* Ensure `this.refs` is defined, even if no refs are specified.
-
-### Addons
-
-* `update` function to deal with immutable data. [Read the docs](https://reactjs.org/docs/update.html)
-
-### react-tools
-* Added an option argument to `transform` function. The only option supported is `harmony`, which behaves the same as `jsx --harmony` on the command line. This uses the ES6 transforms from [jstransform](https://github.com/facebook/jstransform).
-
-
-## 0.9.0 (February 20, 2014)
-
-### React Core
-
-#### Breaking Changes
-
-- The lifecycle methods `componentDidMount` and `componentDidUpdate` no longer receive the root node as a parameter; use `this.getDOMNode()` instead
-- Whenever a prop is equal to `undefined`, the default value returned by `getDefaultProps` will now be used instead
-- `React.unmountAndReleaseReactRootNode` was previously deprecated and has now been removed
-- `React.renderComponentToString` is now synchronous and returns the generated HTML string
-- Full-page rendering (that is, rendering the `<html>` tag using React) is now supported only when starting with server-rendered markup
-- On mouse wheel events, `deltaY` is no longer negated
-- When prop types validation fails, a warning is logged instead of an error thrown (with the production build of React, type checks are now skipped for performance)
-- On `input`, `select`, and `textarea` elements, `.getValue()` is no longer supported; use `.getDOMNode().value` instead
-- `this.context` on components is now reserved for internal use by React
-
-#### New Features
-
-- React now never rethrows errors, so stack traces are more accurate and Chrome's purple break-on-error stop sign now works properly
-- Added support for SVG tags `defs`, `linearGradient`, `polygon`, `radialGradient`, `stop`
-- Added support for more attributes:
-  - `crossOrigin` for CORS requests
-  - `download` and `hrefLang` for `<a>` tags
-  - `mediaGroup` and `muted` for `<audio>` and `<video>` tags
-  - `noValidate` and `formNoValidate` for forms
-  - `property` for Open Graph `<meta>` tags
-  - `sandbox`, `seamless`, and `srcDoc` for `<iframe>` tags
-  - `scope` for screen readers
-  - `span` for `<colgroup>` tags
-- Added support for defining `propTypes` in mixins
-- Added `any`, `arrayOf`, `component`, `oneOfType`, `renderable`, `shape` to `React.PropTypes`
-- Added support for `statics` on component spec for static component methods
-- On all events, `.currentTarget` is now properly set
-- On keyboard events, `.key` is now polyfilled in all browsers for special (non-printable) keys
-- On clipboard events, `.clipboardData` is now polyfilled in IE
-- On drag events, `.dragTransfer` is now present
-- Added support for `onMouseOver` and `onMouseOut` in addition to the existing `onMouseEnter` and `onMouseLeave` events
-- Added support for `onLoad` and `onError` on `<img>` elements
-- Added support for `onReset` on `<form>` elements
-- The `autoFocus` attribute is now polyfilled consistently on `input`, `select`, and `textarea`
-
-#### Bug Fixes
-
-- React no longer adds an `__owner__` property to each component's `props` object; passed-in props are now never mutated
-- When nesting top-level components (e.g., calling `React.renderComponent` within `componentDidMount`), events now properly bubble to the parent component
-- Fixed a case where nesting top-level components would throw an error when updating
-- Passing an invalid or misspelled propTypes type now throws an error
-- On mouse enter/leave events, `.target`, `.relatedTarget`, and `.type` are now set properly
-- On composition events, `.data` is now properly normalized in IE9 and IE10
-- CSS property values no longer have `px` appended for the unitless properties `columnCount`, `flex`, `flexGrow`, `flexShrink`, `lineClamp`, `order`, `widows`
-- Fixed a memory leak when unmounting children with a `componentWillUnmount` handler
-- Fixed a memory leak when `renderComponentToString` would store event handlers
-- Fixed an error that could be thrown when removing form elements during a click handler
-- Boolean attributes such as `disabled` are rendered without a value (previously `disabled="true"`, now simply `disabled`)
-- `key` values containing `.` are now supported
-- Shortened `data-reactid` values for performance
-- Components now always remount when the `key` property changes
-- Event handlers are attached to `document` only when necessary, improving performance in some cases
-- Events no longer use `.returnValue` in modern browsers, eliminating a warning in Chrome
-- `scrollLeft` and `scrollTop` are no longer accessed on document.body, eliminating a warning in Chrome
-- General performance fixes, memory optimizations, improvements to warnings and error messages
-
-### React with Addons
-
-- `React.addons.TestUtils` was added to help write unit tests
-- `React.addons.TransitionGroup` was renamed to `React.addons.CSSTransitionGroup`
-- `React.addons.TransitionGroup` was added as a more general animation wrapper
-- `React.addons.cloneWithProps` was added for cloning components and modifying their props
-- Bug fix for adding back nodes during an exit transition for CSSTransitionGroup
-- Bug fix for changing `transitionLeave` in CSSTransitionGroup
-- Performance optimizations for CSSTransitionGroup
-- On checkbox `<input>` elements, `checkedLink` is now supported for two-way binding
-
-### JSX Compiler and react-tools Package
-
-- Whitespace normalization has changed; now space between two tags on the same line will be preserved, while newlines between two tags will be removed
-- The `react-tools` npm package no longer includes the React core libraries; use the `react` package instead.
-- `displayName` is now added in more cases, improving error messages and names in the React Dev Tools
-- Fixed an issue where an invalid token error was thrown after a JSX closing tag
-- `JSXTransformer` now uses source maps automatically in modern browsers
-- `JSXTransformer` error messages now include the filename and problematic line contents when a file fails to parse
-
-## 0.8.0 (December 19, 2013)
-
-### React
-
-* Added support for more attributes:
-  * `rows` & `cols` for `<textarea>`
-  * `defer` & `async` for `<script>`
-  * `loop` for `<audio>` & `<video>`
-  * `autoCorrect` for form fields (a non-standard attribute only supported by mobile WebKit)
-* Improved error messages
-* Fixed Selection events in IE11
-* Added `onContextMenu` events
-
-### React with Addons
-
-* Fixed bugs with TransitionGroup when children were undefined
-* Added support for `onTransition`
-
-### react-tools
-
-* Upgraded `jstransform` and `esprima-fb`
-
-### JSXTransformer
-
-* Added support for use in IE8
-* Upgraded browserify, which reduced file size by ~65KB (16KB gzipped)
-
-
-## 0.5.2, 0.4.2 (December 18, 2013)
-
-### React
-
-* Fixed a potential XSS vulnerability when using user content as a `key`: [CVE-2013-7035](https://groups.google.com/forum/#!topic/reactjs/OIqxlB2aGfU)
-
-
-## 0.5.1 (October 29, 2013)
-
-### React
-
-* Fixed bug with `<input type="range">` and selection events.
-* Fixed bug with selection and focus.
-* Made it possible to unmount components from the document root.
-* Fixed bug for `disabled` attribute handling on non-`<input>` elements.
-
-### React with Addons
-
-* Fixed bug with transition and animation event detection.
-
-
-## 0.5.0 (October 16, 2013)
-
-### React
-
-* Memory usage improvements - reduced allocations in core which will help with GC pauses
-* Performance improvements - in addition to speeding things up, we made some tweaks to stay out of slow path code in V8 and Nitro.
-* Standardized prop -> DOM attribute process. This previously resulting in additional type checking and overhead as well as confusing cases for users. Now we will always convert your value to a string before inserting it into the DOM.
-* Support for Selection events.
-* Support for [Composition events](https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent).
-* Support for additional DOM properties (`charSet`, `content`, `form`, `httpEquiv`, `rowSpan`, `autoCapitalize`).
-* Support for additional SVG properties (`rx`, `ry`).
-* Support for using `getInitialState` and `getDefaultProps` in mixins.
-* Support mounting into iframes.
-* Bug fixes for controlled form components.
-* Bug fixes for SVG element creation.
-* Added `React.version`.
-* Added `React.isValidClass` - Used to determine if a value is a valid component constructor.
-* Removed `React.autoBind` - This was deprecated in v0.4 and now properly removed.
-* Renamed  `React.unmountAndReleaseReactRootNode` to `React.unmountComponentAtNode`.
-* Began laying down work for refined performance analysis.
-* Better support for server-side rendering - [react-page](https://github.com/facebook/react-page) has helped improve the stability for server-side rendering.
-* Made it possible to use React in environments enforcing a strict [Content Security Policy](https://developer.mozilla.org/en-US/docs/Security/CSP/Introducing_Content_Security_Policy). This also makes it possible to use React to build Chrome extensions.
-
-### React with Addons (New!)
-
-* Introduced a separate build with several "addons" which we think can help improve the React experience. We plan to deprecate this in the long-term, instead shipping each as standalone pieces. [Read more in the docs](https://reactjs.org/docs/addons.html).
-
-### JSX
-
-* No longer transform `class` to `className` as part of the transform! This is a breaking change - if you were using `class`, you *must* change this to `className` or your components will be visually broken.
-* Added warnings to the in-browser transformer to make it clear it is not intended for production use.
-* Improved compatibility for Windows
-* Improved support for maintaining line numbers when transforming.
-
-
-## 0.4.1 (July 26, 2013)
-
-### React
-
-* `setState` callbacks are now executed in the scope of your component.
-* `click` events now work on Mobile Safari.
-* Prevent a potential error in event handling if `Object.prototype` is extended.
-* Don't set DOM attributes to the string `"undefined"` on update when previously defined.
-* Improved support for `<iframe>` attributes.
-* Added checksums to detect and correct cases where server-side rendering markup mismatches what React expects client-side.
-
-### JSXTransformer
-
-* Improved environment detection so it can be run in a non-browser environment.
-
-
-## 0.4.0 (July 17, 2013)
-
-### React
-
-* Switch from using `id` attribute to `data-reactid` to track DOM nodes. This allows you to integrate with other JS and CSS libraries more easily.
-* Support for more DOM elements and attributes (e.g., `<canvas>`)
-* Improved server-side rendering APIs. `React.renderComponentToString(<component>, callback)` allows you to use React on the server and generate markup which can be sent down to the browser.
-* `prop` improvements: validation and default values. [Read our blog post for details...](https://reactjs.org/blog/2013/07/11/react-v0-4-prop-validation-and-default-values.html)
-* Support for the `key` prop, which allows for finer control over reconciliation. [Read the docs for details...](https://reactjs.org/docs/multiple-components.html)
-* Removed `React.autoBind`. [Read our blog post for details...](https://reactjs.org/blog/2013/07/02/react-v0-4-autobind-by-default.html)
-* Improvements to forms. We've written wrappers around `<input>`, `<textarea>`, `<option>`, and `<select>` in order to standardize many inconsistencies in browser implementations. This includes support for `defaultValue`, and improved implementation of the `onChange` event, and circuit completion. [Read the docs for details...](https://reactjs.org/docs/forms.html)
-* We've implemented an improved synthetic event system that conforms to the W3C spec.
-* Updates to your component are batched now, which may result in a significantly faster re-render of components. `this.setState` now takes an optional callback as it's second parameter. If you were using `onClick={this.setState.bind(this, state)}` previously, you'll want to make sure you add a third parameter so that the event is not treated as the callback.
-
-### JSX
-
-* Support for comment nodes `<div>{/* this is a comment and won't be rendered */}</div>`
-* Children are now transformed directly into arguments instead of being wrapped in an array
-  E.g. `<div><Component1/><Component2/></div>` is transformed into `React.DOM.div(null, Component1(null), Component2(null))`.
-  Previously this would be transformed into `React.DOM.div(null, [Component1(null), Component2(null)])`.
-  If you were using React without JSX previously, your code should still work.
-
-### react-tools
-
-* Fixed a number of bugs when transforming directories
-* No longer re-write `require()`s to be relative unless specified
-
-
-## 0.3.3 (June 20, 2013)
-
-### React
-
-* Allow reusing the same DOM node to render different components. e.g. `React.renderComponent(<div/>, domNode); React.renderComponent(<span/>, domNode);` will work now.
-
-### JSX
-
-* Improved the in-browser transformer so that transformed scripts will execute in the expected scope. The allows components to be defined and used from separate files.
-
-### react-tools
-
-* Upgrade Commoner so `require` statements are no longer relativized when passing through the transformer. This was a feature needed when building React, but doesn't translate well for other consumers of `bin/jsx`.
-* Upgraded our dependencies on Commoner and Recast so they use a different directory for their cache.
-* Freeze our Esprima dependency.
-
-
-## 0.3.2 (May 31, 2013)
-
-### JSX
-
-* Improved compatibility with other coding styles (specifically, multiple assignments with a single `var`).
-
-### react-tools
-
-* Switch from using the browserified build to shipping individual modules. This allows react-tools to be used with [browserify](https://github.com/substack/node-browserify).
-
-
-## 0.3.1 (May 30, 2013)
-
-### react-tools
-
-* Fix bug in packaging resulting in broken module.
-
-
-## 0.3.0 (May 29, 2013)
-
-* Initial public release
+- [1ef51cb](../../commit/1ef51cb) [added] Changelog generation from commit messages
+- [13baeaa](../../commit/13baeaa) [added] Release task to push and tag docs and bower repos
+- [0193046](../../commit/0193046) [changed] Move built components to lib directory

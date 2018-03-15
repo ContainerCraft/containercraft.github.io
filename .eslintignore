@@ -1,14 +1,11 @@
-# Third party
-**/node_modules
-
-# Not written by hand
-packages/react-art/npm/lib
-
-# Build products
-build/
+lib/
+dist/
+node_modules/
+es/
+amd/
+docs/assets
 coverage/
-fixtures/
-scripts/bench/benchmarks/**/*.js
-
-# React repository clone
-scripts/bench/remote-repo/
+.cache/
+public/
+static/
+tmp-*-repo/
