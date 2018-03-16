@@ -255,6 +255,7 @@ DEPENDENCIES
   github-pages
   jekyll
   jekyll-assets
+  jekyll-paginate
   maruku
   rake
   sass

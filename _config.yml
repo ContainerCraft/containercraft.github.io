@@ -43,7 +43,7 @@ inc:
 
 url:         http://incorporated.sendtoinc.com
 source:      .
-destination: ./_site
+destination:     _site
 plugins_dir:     _plugins
 layouts_dir:     _layouts
 include:     ['.htaccess']
@@ -87,21 +87,21 @@ rdiscount:
 redcarpet:
   extensions: []
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+#kramdown:
+#  auto_ids: true
+#  footnote_nr: 1
+#  entity_output: as_char
+#  toc_levels: 1..6
+#  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: true
 
   coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
+    wrap: div
+    line_numbers: inline
+    line_numbers_start: 1
+    tab_width: 4
+    bold_every: 10
+    css: style
 
 redcloth:
   hard_breaks: true
