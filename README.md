@@ -1,5 +1,28 @@
-# Jekyll Incorporated
-Modern Jekyll based blog. Great for companies, products or anything. See live at [blog.sendtoinc.com](http://blog.sendtoinc.com)
+# ContainerCraft.io - Front Page Hosting
+
+#### Container Build:
+    1) $ lxc launch ubuntu: containercraftio-c01
+    2) $ obb --add-port physical-net ccio01 containercraftio-c01
+    3) $ lxc restart containercraftio-c01
+    4) $ lxc exec containercraftio-c01 bash
+    5) $ apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y
+
+#### Ruby Installation:
+    1) $ sudo apt install ruby ruby-dev make gcc tree zlib1g-dev
+    2) $ gem install jekyll bundler
+    
+#### Repo Setup:
+    1) $ git clone https://github.com/containercraft/containercraft.github.io.git
+    2) $ cd containercraft.github.io
+    3) $ bundle install
+    4) $ bundle update
+    5) $ jekyll serve --watch
+
+# Template Info:
+## Jekyll Incorporated
+Modern Jekyll based blog. Great for companies, products or anything. See live at [containercraft.io](http://containercraft.io)
+
+
 
 ## Installation & Usage
     bundle install
