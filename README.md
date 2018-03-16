@@ -11,7 +11,7 @@ Where core pre-production web development occurs before final merging.
 
 #### Ruby Installation:
     1) $ sudo apt install ruby ruby-dev make gcc tree zlib1g-dev
-    2) $ gem install jekyll bundler
+    2) $ gem install jekyll bundler nokogiri jekyll-paginate
     
 #### Repo Setup:
     1) $ git clone https://github.com/containercraft/containercraft.github.io.git
