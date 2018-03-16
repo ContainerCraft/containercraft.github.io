@@ -1,4 +1,6 @@
 # ContainerCraft.io - Front Page Hosting
+#### Branch 'Core-Dev'
+Where core pre-production web development occurs before final merging.
 
 #### Container Build:
     1) $ lxc launch ubuntu: containercraftio-c01
