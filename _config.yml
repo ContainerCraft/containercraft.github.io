@@ -6,7 +6,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://ContainerCraft.io" # the base hostname & protocol for your site
 
 twitter_username: ContainercraftI
-github_username: containercraft
+github_username: containercraft/containercraft.github.io
 
 # Build settings
 markdown: kramdown
