@@ -1,4 +1,4 @@
-# [ContainerCraft.io](http://containercraft.io) - GitHub Pages | Front Page
+# ContainerCraft.io - Front Page Hosting
 #### Branch 'Core-Dev'
 Where core pre-production web development occurs before final merging.
 
